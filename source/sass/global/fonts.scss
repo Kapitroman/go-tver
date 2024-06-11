@@ -1,18 +1,23 @@
-// @font-face {
-//   font-style: normal;
-//   font-weight: 400;
-//   font-family: "Rouble";
-
-//   font-display: swap;
-//   src:
-//     url("../fonts/rouble.woff2") format("woff2");
-// }
+@font-face {
+  font-family: "Ubuntu Sans";
+  src: url("../fonts/UbuntuSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
+  font-family: "PT Serif";
+  src: url("../fonts/PTSerif-Regular.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
-  font-family: "";
-
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Ubuntu Sans";
+  src: url("../fonts/UbuntuSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
