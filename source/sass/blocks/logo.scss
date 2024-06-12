@@ -1,0 +1,81 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  color: $color-black;
+
+  svg,
+  img {
+    width: 203px;
+    height: 32px;
+  }
+
+  &__text {
+    width: 166px;
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 140%;
+  }
+
+  @include vp-767 {
+    /*
+    &__text {
+      display: none;
+    }
+    */
+  }
+
+  .header & {
+    @include vp-767 {
+      svg,
+      img {
+        width: 160px;
+        height: 24px;
+      }
+
+      &__text {
+        display: none;
+      }
+    }
+  }
+
+  .footer & {
+    flex-direction: column;
+    gap: 16px;
+
+    color: $color-white;
+
+    @include vp-767 {
+      flex-direction: row;
+      gap: 24px;
+    }
+
+    svg,
+    img {
+      width: 178px;
+      height: 28px;
+
+      @include vp-767 {
+        width: 148px;
+        height: 23px;
+      }
+    }
+
+    &__text {
+      width: 178px;
+
+      font-size: 14px;
+      line-height: 140%;
+
+      @include vp-767 {
+        width: 148px;
+
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+
