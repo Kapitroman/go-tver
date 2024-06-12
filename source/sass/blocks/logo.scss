@@ -78,4 +78,10 @@
   }
 }
 
+a.logo {
+  transition: opacity $trans-default;
 
+  @include hover-focus {
+    opacity: 0.7;
+  }
+}
