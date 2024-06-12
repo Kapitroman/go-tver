@@ -1,0 +1,29 @@
+mixin socials()
+  -
+    const socials = [
+      {
+        icon: "dzen",
+        text: "Дзен",
+      },
+      {
+        icon: "vk",
+        text: "ВК",
+      },
+      {
+        icon: "telegram",
+        text: "Телеграм",
+      },
+      {
+        icon: "odnoklasniki",
+        text: "Одноклассники",
+      },
+    ]
+
+  .socials
+    p.socials__text Мы в соц. сетях:
+    ul.socials__list
+      each item in socials
+        li.socials__item
+          a(href="#").socials__link
+            +icon(item.icon, 32, 32)
+            span.visually-hidden=item.text
