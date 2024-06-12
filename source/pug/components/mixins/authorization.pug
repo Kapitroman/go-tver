@@ -1,0 +1,12 @@
+mixin authorization(options = {})
+  - const picture = options.picture ? options.picture : "login-photo";
+  - const name = options.name ? options.name : "Дмитрий";
+  if (authorization === false)
+    a(href="#").authorization
+      +icon("user", 24, 24)
+      p.authorization__action Вход / Регистрация
+  else
+    a(href="#").authorization
+      .authorization__picture
+        +picture("content", picture, "png", 36, 36, "иконка юзера", false)
+      p.authorization__name=name

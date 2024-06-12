@@ -1,0 +1,72 @@
+.authorization {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include hover-focus {
+    .authorization__action,
+    .authorization__name {
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__action,
+  &__name {
+    position: relative;
+
+    margin: 0;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: $color-black;
+
+      transform: scale(0);
+      transform-origin: center;
+      transition: transform $trans-default;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__action {
+    margin-left: 8px;
+    white-space: nowrap;
+  }
+
+  &__name {
+    margin-left: 12px;
+  }
+
+  &__picture {
+    width: 36px;
+    height: 36px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+
+      object-fit: cover;
+    }
+  }
+}
