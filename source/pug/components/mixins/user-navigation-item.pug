@@ -1,0 +1,20 @@
+mixin user-navigation-item(options = {})
+
+  - const addClass = options.class ? `user-navigation-item user-navigation-item--${options.class}` : "user-navigation-item";
+  - const image1 = options.images&&options.images[0] ? options.images[0] : "image-01";
+  - const image2 = options.images&&options.images[1] ? options.images[1] : "image-02";
+  - const image3 = options.images&&options.images[2] ? options.images[2] : "image-03";
+  - const title = options.title ? options.title : "Топ";
+  - const info = options.info ? options.info : "+8 историй";
+
+  a(href="#", class=addClass)&attributes(attributes)
+    .user-navigation-item__images
+      .user-navigation-item__picture
+        +picture("content/user-navigation", image1, "png", 40, 40,"иконка достопримеча́тельности", false)
+      .user-navigation-item__picture
+        +picture("content/user-navigation", image2, "png", 40, 40,"иконка достопримеча́тельности", false)
+      .user-navigation-item__picture
+        +picture("content/user-navigation", image3, "png", 40, 40,"иконка достопримеча́тельности", false)
+    .user-navigation-item__text
+      p.user-navigation-item__title=title
+      p.user-navigation-item__info=info
