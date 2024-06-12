@@ -1,0 +1,11 @@
+.menu-user-navigation.swiper {
+  overflow: visible;
+
+  .swiper-slide {
+    width: auto;
+
+    @include vp-767 {
+      width: 64px;
+    }
+  }
+}

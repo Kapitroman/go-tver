@@ -87,10 +87,6 @@
     }
   }
 
-  &__text {
-
-  }
-
   &__title {
     margin: 0;
 
@@ -100,6 +96,7 @@
 
     @include vp-767 {
       font-size: 12px;
+      text-align: center;
     }
   }
 

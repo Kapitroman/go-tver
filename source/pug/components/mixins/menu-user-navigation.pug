@@ -1,0 +1,40 @@
+mixin menu-user-navigation()
+  -
+    const userNavigationList = [
+      {
+        class: "red",
+        images: ["image-01", "image-02", "image-03"],
+        title: "Топ",
+        info: "+8 историй"
+      },
+      {
+        class: "green",
+        images: ["image-04", "image-05", "image-03"],
+        title: "Маршруты",
+        info: "+51 историй"
+      },
+      {
+        class: "blue",
+        images: ["image-01", "image-02", "image-03"],
+        title: "Новости",
+        info: "+17 историй"
+      },
+      {
+        class: "purple",
+        images: ["image-04", "image-05", "image-03"],
+        title: "Афиша",
+        info: "+74 историй"
+      },
+      {
+        class: "red",
+        images: ["image-01", "image-02", "image-03"],
+        title: "Переезд в Тверь",
+        info: "+24 историй"
+      },
+    ]
+
+  .menu-user-navigation.swiper
+    .swiper-wrapper
+      each item in userNavigationList
+        +user-navigation-item(item).swiper-slide
+
