@@ -7,6 +7,10 @@
     gap: 14px;
   }
 
+  @include vp-374 {
+    gap: 5px;
+  }
+
   &__item {
     display: flex;
     align-items: center;

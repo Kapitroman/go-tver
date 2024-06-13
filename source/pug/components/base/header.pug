@@ -17,10 +17,14 @@ mixin header(headerMods, currentUrl)
 
   header.header(class=headerMods)
     .container
-      +logo()
-      +menu-button()
-      +search()
-      +menu-user-group()
+      .header__top
+        +logo()
+        +menu-button()
+        +search()
+        +menu-user-group()
+    .header__bottom
+      .container
+        +menu-user-navigation()
       //-+authorization({
         picture: "login-photo",
         name: "Дмитрий"
