@@ -1,0 +1,6 @@
+mixin search()
+  .search&attributes(attributes)
+    form(action="#" metod="get")
+      label
+        +icon("search", 24, 24)
+        input(id="search" type="search" name="search" placeholder="Найти место или событие")

@@ -18,12 +18,14 @@ mixin header(headerMods, currentUrl)
   header.header(class=headerMods)
     .container
       +logo()
+      +menu-button()
+      +search()
       +authorization({
         picture: "login-photo",
         name: "Дмитрий"
       })
 
-      nav.main-nav
+      //-nav.main-nav
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
           +icon("icon-burger", 20, 20)
         .main-nav__wrapper
