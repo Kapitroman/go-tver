@@ -14,20 +14,20 @@ block main
   main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
-    +intro()
-    +menu-button()
-    .is-open
+    //-+intro()
+    //-+menu-button()
+    //-.is-open
       +menu-button()
-    +user-navigation-item({
+    //-+user-navigation-item({
       class: "red",
       images: ["image-01", "image-02", "image-03"],
       title: "Топ",
       info: "+8 историй"
-    })
-    //.container
+    //-})
+    //-.container
       +menu-user-navigation()
-    +socials()
-    +call-support()
-    +search().search--mobile
+    //-+socials()
+    //-+call-support()
+    //-+search().search--mobile
 
 block modals

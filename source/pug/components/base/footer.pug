@@ -1,6 +1,43 @@
 mixin footer(footerMods)
   footer.footer(class=footerMods)
     .container
-      +logo()
-      +socials()
-      +call-support()
+      .footer__wrap
+        +call-support()
+        +logo()
+        .footer__navigation-group
+          p.footer__navigation-group-title Локации
+          ul.footer__navigation-group-list
+            li.footer__navigation-group-item
+              a(href="#").footer__navigation-group-link Тверь
+            li.footer__navigation-group-item
+              a(href="#").footer__navigation-group-link Ржев
+            li.footer__navigation-group-item
+              a(href="#").footer__navigation-group-link Конаково
+            li.footer__navigation-group-item
+              a(href="#").footer__navigation-group-link Старица
+            li.footer__navigation-group-item
+              a(href="#").footer__navigation-group-link Торжок
+        .footer__navigation-group
+          p.footer__navigation-group-title Пользователям
+          ul.footer__navigation-group-list
+            li.footer__navigation-group-item
+              a(href="#").footer__navigation-group-link Маршруты
+            li.footer__navigation-group-item
+              a(href="#").footer__navigation-group-link Афиша
+            li.footer__navigation-group-item
+              a(href="#").footer__navigation-group-link Новости
+            li.footer__navigation-group-item
+              a(href="#").footer__navigation-group-link Переезд
+            li.footer__navigation-group-item
+              a(href="#").footer__navigation-group-link Поиск по тегу
+            li.footer__navigation-group-item
+              a(href="#").footer__navigation-group-link Для рекламодателей
+        +socials()
+        .footer__bottom-group
+          p.footer__copyright © 2022 — 2024 «GoTver». Все права защищены.
+          .footer__policy-group
+            a(href="#").footer__policy-link Правила пользования платформой
+            a(href="#").footer__policy-link Политика конфиденциальности
+          a(href="#").footer__developer-link
+            span Сделано в
+            +icon("ruso", 52, 11)
