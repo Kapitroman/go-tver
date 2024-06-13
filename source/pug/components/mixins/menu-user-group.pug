@@ -1,8 +1,8 @@
 mixin menu-user-group
   .menu-user-group
     a(href="#").menu-user-group-item
-      +icon("heart", 24, 24)
-      span Избранное
+      +icon("heart", 24, 24).menu-user-group-item__icon
+      span.menu-user-group-item__text Избранное
     +authorization({
       picture: "login-photo",
       name: "Дмитрий"
