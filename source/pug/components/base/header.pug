@@ -20,10 +20,11 @@ mixin header(headerMods, currentUrl)
       +logo()
       +menu-button()
       +search()
-      +authorization({
+      +menu-user-group()
+      //-+authorization({
         picture: "login-photo",
         name: "Дмитрий"
-      })
+      //-})
 
       //-nav.main-nav
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
