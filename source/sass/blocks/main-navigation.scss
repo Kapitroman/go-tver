@@ -1,0 +1,389 @@
+.main-navigation {
+  position: fixed;
+  top: 198px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  overflow: auto;
+
+  padding-top: 50px;
+
+  background-color: $color-bg;
+
+  @include vp-767 {
+    top: 179px;
+
+    padding-top: 0;
+  }
+
+  .is-open & {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+
+  &__search {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+      border-top: 1px solid $color-sep;
+      border-bottom: 1px solid $color-sep;
+    }
+  }
+
+  &__search {
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    display: flex;
+    gap: 10.17%;
+
+    max-width: 100%;
+    margin-bottom: 120px;
+
+    @include vp-1279 {
+      gap: 6%;
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+
+      margin-bottom: 40px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    width: 336px;
+
+    @include vp-1279 {
+      width: 300px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &__control {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+
+    width: 100%;
+    padding: 0;
+    min-width: auto;
+    border: none;
+
+    color: $color-txt2;
+
+    background-color: $color-transparent;
+
+    cursor: pointer;
+
+    transition: opacity $trans-default;
+
+    @include vp-767 {
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 16px 0 15px 0;
+      border-bottom: 1px solid $color-sep;
+      color: $color-black;
+    }
+
+    @include hover-focus {
+      opacity: 0.7;
+    }
+
+    svg {
+      display: none;
+
+      width: 6px;
+      height: 11px;
+
+      color: $color-txt2;
+
+      transition: color $trans-default;
+    }
+
+    svg:nth-of-type(2) {
+      transform: rotate(180deg);
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+
+    span:nth-of-type(1) {
+      font-family: ff-pt;
+      font-size: 48px;
+      line-height: 130%;
+
+      transition: color $trans-default;
+
+      @include vp-767 {
+        font-size: 24px;
+        line-height: 130%;
+      }
+    }
+
+    span:nth-of-type(2) {
+      width: 60px;
+      height: 1px;
+
+      background-color: $color-txt2;
+
+      transition: background-color $trans-default, width $trans-default;
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+
+    &.is-active {
+      color: $color-black;
+
+      span:nth-of-type(2) {
+        background-color: $color-black;
+        width: 100%;
+      }
+    }
+
+    .is-active & {
+      justify-content: initial;
+
+      @include vp-767 {
+        svg:nth-of-type(1) {
+          display: block;
+        }
+
+        svg:nth-of-type(2) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__wrap {
+    width: calc(100% - 10.17% - 336px);
+
+    @include vp-1279 {
+      width: calc(100% - 6% - 300px);
+    }
+
+    @include vp-767 {
+      width: 100%;
+
+      order: 2;
+
+      margin-top: 39px;
+    }
+  }
+
+  &__content {
+    transition: height 0.3s;
+  }
+
+  &__element {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 24px;
+    row-gap: 64px;
+
+    width: 100%;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include vp-767 {
+      column-gap: 16px;
+      row-gap: 16px;
+
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__element-group-title {
+    margin: 0;
+    margin-bottom: 16px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+
+    @include vp-767 {
+      margin-bottom: 8px;
+
+      font-size: 16px;
+    }
+  }
+
+  &__element-group-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+
+    font-size: 16px;
+    line-height: 150%;
+
+    @include vp-767 {
+      font-size: 14px;
+    }
+  }
+
+  &__element-link {
+    color: $color-txt2;
+
+    transition: color $trans-default;
+
+    @include hover-focus {
+      color: $color-black;
+    }
+  }
+
+  &__total-container-links {
+    position: static;
+
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+
+    @include vp-767 {
+      gap: 40px;
+    }
+
+    .show-tab & {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__total-group-links-title {
+    margin: 0;
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-txt2;
+
+    @include vp-767 {
+      font-size: 14px;
+    }
+  }
+
+  &__total-group-links-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    column-gap: 48px;
+
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+
+    @include vp-767 {
+      row-gap: 12px;
+      column-gap: 24px;
+
+      font-size: 16px;
+    }
+  }
+
+  &__total-group-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: $color-black;
+
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.7;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+  &__footer-content {
+    display: flex;
+    justify-content: space-between;
+
+    width: calc(100% - 10.17% - 336px);
+
+    margin-left: auto;
+
+    @include vp-1279 {
+      width: calc(100% - 6% - 300px);
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      justify-content: initial;
+
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .socials {
+      margin-right: 25px;
+
+      @include vp-767 {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+    }
+
+    .socials__list {
+      @include vp-1023 {
+        gap: 10px;
+      }
+
+      @include vp-767 {
+        gap: 16px;
+      }
+    }
+
+    .call-support {
+      @include vp-767 {
+       max-width: 100%;
+      }
+    }
+  }
+}

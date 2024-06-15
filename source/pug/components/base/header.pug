@@ -1,21 +1,99 @@
 mixin header(headerMods, currentUrl)
-  -
-    const headerLinks = [
-      {
-        href: "index.html",
-        text: "Главная"
-      },
-      {
-        href: "#",
-        text: "Страница 2"
-      },
-      {
-        href: "#",
-        text: "Страница 3"
-      },
-    ]
+  - const totalDirectionLinks = ["Охота", "Паломничество", "Рыбалка", "Охота", "Паломничество", "Рыбалка", "Охота", "Паломничество", "Рыбалка", "Охота", "Паломничество", "Рыбалка", "Охота", "Паломничество", "Рыбалка", "Охота", "Паломничество", "Рыбалка",];
 
-  header.header(class=headerMods)
+  -
+    const totalForUserLinks = [
+      {
+        icon: "route",
+        text: "Маршруты"
+      },
+      {
+        icon: "afisha",
+        text: "Афиша"
+      },
+      {
+        icon: "news",
+        text: "Новости"
+      },
+      {
+        icon: "bag",
+        text: "Переезд"
+      },
+      {
+        icon: "tag",
+        text: "Поиск по тегу"
+      }
+    ];
+
+  -
+    const elementGroupLinksTver = [
+      {
+        title: "Что посмотреть",
+        links: ["Отели Твери", "Хостелы Твери", "Апартаменты Твери", "Базы отдыха Твери"]
+      },
+      {
+        title: "Чем заняться",
+        links: ["Отели Твери", "Хостелы Твери", "Апартаменты Твери", "Базы отдыха Твери"]
+      },
+      {
+        title: "Где поесть",
+        links: ["Отели Твери", "Хостелы Твери", "Апартаменты Твери", "Базы отдыха Твери"]
+      },
+      {
+        title: "Где остановиться",
+        links: ["Отели Твери", "Хостелы Твери", "Апартаменты Твери", "Базы отдыха Твери"]
+      },
+      {
+        title: "Экскурсии",
+        links: ["Отели Твери", "Хостелы Твери", "Апартаменты Твери", "Базы отдыха Твери"]
+      }
+    ];
+
+  -
+    const elementGroupLinksRzhev = [
+      {
+        title: "Что посмотреть",
+        links: ["Отели Твери", "Хостелы Твери", "Апартаменты Твери", "Базы отдыха Твери"]
+      },
+      {
+        title: "Чем заняться",
+        links: ["Отели Твери", "Хостелы Твери", "Апартаменты Твери", "Базы отдыха Твери"]
+      },
+    ];
+
+  -
+    const elementGroupLinksKonakovo = [
+      {
+        title: "Что посмотреть",
+        links: ["Отели Твери", "Хостелы Твери", "Апартаменты Твери"]
+      },
+      {
+        title: "Чем заняться",
+        links: ["Отели Твери", "Хостелы Твери", "Апартаменты Твери", "Базы отдыха Твери"]
+      },
+      {
+        title: "Где поесть",
+        links: ["Отели Твери", "Хостелы Твери", "Апартаменты Твери", "Базы отдыха Твери"]
+      },
+      {
+        title: "Где остановиться",
+        links: ["Отели Твери", "Хостелы Твери", "Апартаменты Твери", "Базы отдыха Твери"]
+      },
+      {
+        title: "Экскурсии",
+        links: ["Отели Твери", "Базы отдыха Твери"]
+      },
+       {
+        title: "Что посмотреть",
+        links: ["Отели Твери", "Хостелы Твери", "Апартаменты Твери"]
+      },
+      {
+        title: "Что посмотреть",
+        links: ["Отели Твери", "Хостелы Твери", "Апартаменты Твери"]
+      }
+    ];
+
+  header.header(class=headerMods, data-header="")
     .container
       .header__top
         +logo()
@@ -25,20 +103,97 @@ mixin header(headerMods, currentUrl)
     .header__bottom
       .container
         +menu-user-navigation()
-      //-+authorization({
-        picture: "login-photo",
-        name: "Дмитрий"
-      //-})
-
-      //-nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active= link.text
-                else
-                  a.main-nav__link(href=link.href)= link.text
+    div(data-scroll-lock-scrollable).main-navigation
+      .main-navigation__search
+        .container
+          +search()
+      .container
+        .main-navigation__container(data-tabs='parent', data-accordion-media='(max-width:767px)', data-single)
+          .main-navigation__controls(data-tabs='controls')
+            button.main-navigation__control(type='button', data-tabs='control')
+              +icon("arrow-nav", 5, 8)
+              span Тверь
+              span
+              +icon("arrow-nav", 5, 8)
+            button.main-navigation__control(type='button', data-tabs='control')
+              +icon("arrow-nav", 5, 8)
+              span Ржев
+              span
+              +icon("arrow-nav", 5, 8)
+            button.main-navigation__control(type='button', data-tabs='control')
+              +icon("arrow-nav", 5, 8)
+              span Конаково
+              span
+              +icon("arrow-nav", 5, 8)
+            button.main-navigation__control(type='button', data-tabs='control')
+              +icon("arrow-nav", 5, 8)
+              span Старица
+              span
+              +icon("arrow-nav", 5, 8)
+            button.main-navigation__control(type='button', data-tabs='control')
+              +icon("arrow-nav", 5, 8)
+              span Торжок
+              span
+              +icon("arrow-nav", 5, 8)
+          .main-navigation__wrap
+            .main-navigation__content(data-tabs='content')
+              .main-navigation__element(data-tabs='element')
+                each item in elementGroupLinksTver
+                  .main-navigation__element-group
+                    p.main-navigation__element-group-title=item.title
+                    ul.main-navigation__element-group-list
+                      each subitem in item.links
+                        li
+                          a(href="#").main-navigation__element-link=subitem
+              .main-navigation__element(data-tabs='element')
+                each item in elementGroupLinksRzhev
+                  .main-navigation__element-group
+                    p.main-navigation__element-group-title=item.title
+                    ul.main-navigation__element-group-list
+                      each subitem in item.links
+                        li
+                          a(href="#").main-navigation__element-link=subitem
+              .main-navigation__element(data-tabs='element')
+                each item in elementGroupLinksKonakovo
+                  .main-navigation__element-group
+                    p.main-navigation__element-group-title=item.title
+                    ul.main-navigation__element-group-list
+                      each subitem in item.links
+                        li
+                          a(href="#").main-navigation__element-link=subitem
+              .main-navigation__element(data-tabs='element')
+                each item in elementGroupLinksTver
+                  .main-navigation__element-group
+                    p.main-navigation__element-group-title=item.title
+                    ul.main-navigation__element-group-list
+                      each subitem in item.links
+                        li
+                          a(href="#").main-navigation__element-link=subitem
+              .main-navigation__element(data-tabs='element')
+                each item in elementGroupLinksTver
+                  .main-navigation__element-group
+                    p.main-navigation__element-group-title=item.title
+                    ul.main-navigation__element-group-list
+                      each subitem in item.links
+                        li
+                          a(href="#").main-navigation__element-link=subitem
+            .main-navigation__total-container-links
+              .main-navigation__total-group-links
+                p.main-navigation__total-group-links-title Направления:
+                ul.main-navigation__total-group-links-list
+                  each item in totalDirectionLinks
+                    li
+                      a(href="#").main-navigation__total-group-link=item
+              .main-navigation__total-group-links
+                p.main-navigation__total-group-links-title Пользователям:
+                ul.main-navigation__total-group-links-list
+                  each item in totalForUserLinks
+                    li
+                      a(href="#").main-navigation__total-group-link
+                        +icon(item.icon, 24, 24)
+                        span=item.text
+      .main-navigation__footer
+        .container
+          .main-navigation__footer-content
+            +socials()
+            +call-support()

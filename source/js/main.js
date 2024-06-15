@@ -5,6 +5,9 @@ import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 
 import {initUserNavigationSlider} from './modules/init-user-navigation-slider';
+import {Burger} from './modules/burger';
+import {addHeaderClass} from './modules/add-header-class';
+import {initTabs} from './modules/init-tabs';
 
 // ---------------------------------
 
@@ -30,7 +33,11 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
 
+    const burger = new Burger();
+    burger.init();
     initUserNavigationSlider();
+    addHeaderClass();
+    initTabs();
   });
 });
 
