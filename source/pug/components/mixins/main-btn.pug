@@ -1,0 +1,4 @@
+mixin main-btn(options = {})
+  a(href="#").main-btn&attributes(attributes)
+    span=options.text
+    +icon(options.icon, 40, 40)
