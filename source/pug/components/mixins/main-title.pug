@@ -1,0 +1,11 @@
+mixin main-title(options)
+  .main-title&attributes(attributes)
+    h2!=options.title
+    if options.text
+      //-.main-title__info
+      p.main-title__description!=options.text
+    //-if options.button
+          +main-btn({
+            icon: options.button[0],
+            text: options.button[1]
+          })

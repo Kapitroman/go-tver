@@ -52,4 +52,13 @@
       padding-right: 20px;
     }
   }
+
+  &--margin-title {
+    margin-top: 39px;
+    margin-left: calc((100% - 24px) / 2 + 24px);
+
+    @include vp-767 {
+      display: none;
+    }
+  }
 }
