@@ -112,43 +112,45 @@
     }
   }
 
-  &--red {
-    @include hover-focus {
-      background-color: $color-red;
+  @media (min-width: 768px) {
+    &--red {
+      @include hover-focus {
+        background-color: $color-red;
+      }
+
+      .user-navigation-item__info {
+        background-color: $color-red;
+      }
     }
 
-    .user-navigation-item__info {
-      background-color: $color-red;
-    }
-  }
+    &--green {
+      @include hover-focus {
+        background-color: $color-green;
+      }
 
-  &--green {
-    @include hover-focus {
-      background-color: $color-green;
-    }
-
-    .user-navigation-item__info {
-      background-color: $color-green;
-    }
-  }
-
-  &--blue {
-    @include hover-focus {
-      background-color: $color-blue;
+      .user-navigation-item__info {
+        background-color: $color-green;
+      }
     }
 
-    .user-navigation-item__info {
-      background-color: $color-blue;
-    }
-  }
+    &--blue {
+      @include hover-focus {
+        background-color: $color-blue;
+      }
 
-  &--purple {
-    @include hover-focus {
-      background-color: $color-purple;
+      .user-navigation-item__info {
+        background-color: $color-blue;
+      }
     }
 
-    .user-navigation-item__info {
-      background-color: $color-purple;
+    &--purple {
+      @include hover-focus {
+        background-color: $color-purple;
+      }
+
+      .user-navigation-item__info {
+        background-color: $color-purple;
+      }
     }
   }
 }
