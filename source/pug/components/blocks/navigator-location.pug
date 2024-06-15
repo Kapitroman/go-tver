@@ -1,0 +1,46 @@
+mixin navigator-location()
+  -
+    const navigatorLocationItems = [
+      {
+        icon: "tver",
+        title: "Тверь",
+        text: "Административный центр региона на пути из Москвы в Санкт-Петербург.",
+        class: "green",
+      },
+      {
+        icon: "rjov",
+        title: "Ржев",
+        text: "Место воинской славы и памяти подвигов жителей в годы Великой Отечественной войны.",
+        class: "red",
+      },
+      {
+        icon: "konakovo",
+        title: "Конаково",
+        text: "Здесь древнерусская культура соседствуют с живописными пейзажами и богатой природой.",
+        class: "blue",
+      },
+      {
+        icon: "starica",
+        title: "Старица",
+        text: "Удивительная храмовая архитектура, застройка XIX века и старинные каменоломни.",
+        class: "purple",
+      },
+      {
+        icon: "torjok",
+        title: "Торжок",
+        text: "Похож на Суздаль, только другой эпохи и совсем не избалованный туристами!",
+        class: "green",
+      }
+    ];
+
+  section.navigator-location
+    .container
+      +main-title({
+        title: "Ваш путеводитель по Тверской области",
+        text: "В рамках спецификации современных стандартов, акционеры крупнейших компаний освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, в равной степени предоставлены сами себе."
+      })
+      .navigator-location__slider.swiper
+        .swiper-wrapper
+          each item in navigatorLocationItems
+            +navigator-location-item(item).swiper-slide
+

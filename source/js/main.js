@@ -8,6 +8,7 @@ import {initUserNavigationSlider} from './modules/init-user-navigation-slider';
 import {Burger} from './modules/burger';
 import {addHeaderClass} from './modules/add-header-class';
 import {initTabs} from './modules/init-tabs';
+import {initNavigatorLocationSlider} from './modules/init-navigator-location-slider';
 
 // ---------------------------------
 
@@ -38,6 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initUserNavigationSlider();
     addHeaderClass();
     initTabs();
+    initNavigatorLocationSlider();
   });
 });
 

@@ -1,0 +1,9 @@
+mixin navigator-location-item(options)
+  - const addClass = options.class ? `navigator-location-item navigator-location-item--${options.class}` : "navigator-location-item";
+
+  a(href="#" class=addClass).navigator-location-item&attributes(attributes)
+    .navigator-location-item__icon
+      +icon(options.icon, 24, 24)
+    .navigator-location-item__description
+      p.navigator-location-item__title!=options.title
+      p.navigator-location-item__text!=options.text
