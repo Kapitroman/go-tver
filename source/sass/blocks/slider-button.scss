@@ -1,0 +1,43 @@
+.slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid $color-sep;
+
+  background-color: $color-white;
+
+  margin-top: -20px;
+
+  &::after {
+    display: none;
+  }
+
+  svg {
+    width: 6px;
+    height: 11px;
+  }
+
+  @include vp-767 {
+    position: static;
+
+    width: 36px;
+    height: 36px;
+    margin-top: 0;
+  }
+
+  &.swiper-button-prev {
+    left: -20px;
+  }
+
+  &.swiper-button-next {
+    right: -20px;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}

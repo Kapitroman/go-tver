@@ -1,5 +1,5 @@
 mixin popular-touring-item(options)
-  a(href="#").popular-touring-item
+  a(href="#").popular-touring-item&attributes(attributes)
     .popular-touring-item__picture
       +picture("content/popular-touring", options.picture, "png", 216, 320, "фото туризма", true)
     .popular-touring-item__overlay

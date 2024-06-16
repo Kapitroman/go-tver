@@ -1,0 +1,73 @@
+mixin popular-touring()
+  -
+    const popularTouringList = [
+      {
+        picture: "tour-01",
+        text: "Рыбалка"
+      },
+      {
+        picture: "tour-02",
+        text: "Паломничество"
+      },
+      {
+        picture: "tour-03",
+        text: "Охота"
+      },
+      {
+        picture: "tour-01",
+        text: "Рыбалка"
+      },
+      {
+        picture: "tour-02",
+        text: "Паломничество"
+      },
+      {
+        picture: "tour-03",
+        text: "Охота"
+      },
+      {
+        picture: "tour-01",
+        text: "Рыбалка"
+      },
+      {
+        picture: "tour-02",
+        text: "Паломничество"
+      },
+      {
+        picture: "tour-03",
+        text: "Охота"
+      },
+      {
+        picture: "tour-01",
+        text: "Рыбалка"
+      },
+      {
+        picture: "tour-02",
+        text: "Паломничество"
+      },
+      {
+        picture: "tour-03",
+        text: "Охота"
+      },
+    ];
+
+  section.popular-touring
+    .container
+      +main-title({
+        title: "Популярные направления туризма",
+        text: "В рамках спецификации современных стандартов, акционеры крупнейших компаний освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, в равной степени предоставлены сами себе."
+      })
+      +main-btn({
+          icon: "arrow-black",
+          text: "Посмотреть всё"
+        })
+      .popular-touring__slider-container
+        .popular-touring__slider.swiper
+          .swiper-wrapper
+            each item in popularTouringList
+              +popular-touring-item(item).swiper-slide
+        .popular-touring__slider-buttons
+          .slider-button.swiper-button-prev
+            +icon("arrow-nav", 5, 9)
+          .slider-button.swiper-button-next
+            +icon("arrow-nav", 5, 9)
