@@ -15,15 +15,16 @@ block main
     h1.visually-hidden Путеводитель по Твеpской области
     +navigator-location()
     +popular-touring()
+    +popular-articles()
     +tag-search()
 
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
-    +popular-touring-item({
+    //-+popular-touring-item({
       picture: "tour-01",
       text: "Рыбалка"
-    })
-    +news-item({
+    //-})
+    //-+news-item({
       class: "blue",
       picture: "news-01",
       datetime: "2024-05-21",
@@ -31,12 +32,12 @@ block main
       title: "Что посмотреть в Твери зимой",
       description: "Господа, убеждённость некоторых оппонентов требует определения и уточнения форм воздействия. Каждый из нас понимает очевидную вещь: консультация с широким активом воздействия.",
       labels: ["Что посмотреть", "Время чтения: 8 минут"]
-    })
-    //+intro()
-    //+intro()
-    //+intro()
-    //+intro()
-    //+intro()
+    //-})
+    //-+intro()
+    //-+intro()
+    //-+intro()
+    //-+intro()
+    //-+intro()
     //-+menu-button()
     //-.is-open
       +menu-button()
