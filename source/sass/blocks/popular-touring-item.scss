@@ -1,0 +1,63 @@
+.popular-touring-item {
+  display: grid;
+
+  width: 216px;
+  //height: 320px;
+  aspect-ratio: 216 / 320;
+  border-radius: 36px;
+
+  overflow: hidden;
+
+  @include vp-767 {
+    width: 152px;
+    //height: 224px;
+    aspect-ratio: 152 / 224;
+    border-radius: 24px;
+  }
+
+  @include hover-focus {
+    .popular-touring-item__overlay {
+      background-image: linear-gradient(180deg, rgba(39, 41, 46, 0.1) 0%, rgba(39, 41, 46, 0.5) 100%);
+    }
+  }
+
+  & > * {
+    grid-area: 1 / -1;
+  }
+
+  &__picture {
+    //width: 216px;
+    //height: 320px;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__overlay {
+    transition: background-image $trans-default;
+
+    background-image: linear-gradient(180deg, rgba(39, 41, 46, 0.2) 0%, rgba(39, 41, 46, 0.6) 100%);
+  }
+
+  &__text {
+    display: flex;
+    justify-content: center;
+
+    margin: auto 16px 20px 16px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-white;
+
+    @include vp-767 {
+      margin: auto 11px 10px 11px;
+
+      font-size: 14px;
+    }
+  }
+}
