@@ -1,0 +1,26 @@
+mixin main-intro()
+  .main-intro
+    .main-intro__pictures.swiper
+      .swiper-wrapper
+          .main-intro__picture.swiper-slide
+            +picture("content/hero-slider", "hero-01", "png", 1068, 480, "виды города", false)
+          .main-intro__picture.swiper-slide
+            +picture("content/hero-slider", "hero-02", "png", 1068, 480, "виды города", false)
+          .main-intro__picture.swiper-slide
+            +picture("content/hero-slider", "hero-03", "png", 1068, 480, "виды города", false)
+      .container
+        .swiper-pagination
+
+    .main-intro__info
+      .container
+        .main-intro__info-wrapper
+          .main-intro__head
+            h1.main-intro__title Тверь
+            h3.main-intro__subtitle — это
+          .main-intro__text
+            p.main-intro__description Древний город на двух берегах Волги. Административный центр региона на пути из Москвы в Санкт-Петербург. Город, где 28 раз гостил Пушкин, родина знаменитого купца Афанасия Никитина и шансонье Михаила Круга.
+            a(href="#").main-intro__link
+              span Подробнее о Твери
+              +icon("arrow-total", 9, 10)
+
+        +categories-links()

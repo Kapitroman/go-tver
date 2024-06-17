@@ -1,9 +1,8 @@
 .navigator-location {
-  padding: 20px 0 39px 0;
+  padding-top: 20px;
 
   @include vp-767 {
     padding: 0;
-    padding-bottom: 30px;
   }
 
   .container {
@@ -20,5 +19,11 @@
 
   &__slider.swiper {
     overflow: initial;
+
+    margin-bottom: 39px;
+
+    @include vp-767 {
+      margin-bottom: 30px;
+    }
   }
 }

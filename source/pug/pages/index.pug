@@ -12,11 +12,13 @@ block variables
 
 block main
   main
-    h1.visually-hidden Путеводитель по Твеpской области
+    //-h1.visually-hidden Путеводитель по Твеpской области
     +navigator-location()
     +popular-touring()
     +popular-articles()
     +tag-search()
+    //-.container
+      +categories-links()
 
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks

@@ -1,0 +1,29 @@
+mixin categories-links()
+  -
+    const categoriesLinks = [
+      {
+        icon: "what-see",
+        text: "Что посмотреть"
+      },
+      {
+        icon: "what-do",
+        text: "Чем заняться"
+      },
+      {
+        icon: "where-eat",
+        text: "Где поесть"
+      },
+      {
+        icon: "where-stay",
+        text: "Где остановиться"
+      },
+      {
+        icon: "where-go",
+        text: "Экскурсии"
+      },
+    ]
+
+  .categories-links.swiper
+    .swiper-wrapper
+      each item in categoriesLinks
+        +main-btn(item).main-btn--category.swiper-slide

@@ -11,6 +11,8 @@ import {initTabs} from './modules/init-tabs';
 import {initNavigatorLocationSlider} from './modules/init-navigator-location-slider';
 import {initPopularTouringSlider} from './modules/init-popular-touring-slider';
 import {initPopularArticlesSlider} from './modules/init-popular-articles-slider';
+import {initCategoriesLinksSlider} from './modules/init-categories-links-slider';
+import {initHeroSlider} from './modules/init-hero-slider';
 
 // ---------------------------------
 
@@ -44,6 +46,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initNavigatorLocationSlider();
     initPopularTouringSlider();
     initPopularArticlesSlider();
+    initCategoriesLinksSlider();
+    initHeroSlider();
   });
 });
 

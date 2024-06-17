@@ -1,10 +1,26 @@
-mixin news-item(options)
+//-mixin news-item(options)
   - const addClass = options.class ? `news-item news-item--${options.class}` : "news-item";
   a(href="#" class=addClass).news-item&attributes(attributes)
     .news-item__picture
       +picture("content/news", options.picture, "png", 216, 320, "фото тновости", true)
     .news-item__overlay
     .news-item__text
+      time(datetime=options.datetime)=options.datestring
+      p.news-item__title=options.title
+      p.news-item__description=options.description
+      .news-item__labels
+        each item in options.labels
+          p.news-item__label=item
+    button(type=button).news-item__favorite
+      +icon("heart", 24, 24)
+
+mixin news-item(options)
+  - const addClass = options.class ? `news-item news-item--${options.class}` : "news-item";
+  div(class=addClass).news-item&attributes(attributes)
+    .news-item__picture
+      +picture("content/news", options.picture, "png", 216, 320, "фото тновости", true)
+    .news-item__overlay
+    a(href="#").news-item__text
       time(datetime=options.datetime)=options.datestring
       p.news-item__title=options.title
       p.news-item__description=options.description
