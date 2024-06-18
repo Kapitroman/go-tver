@@ -1,0 +1,9 @@
+mixin bread-crumbs(options)
+  .bread-crumbs
+    each item, index in options
+      if index === (options.length - 1)
+        span=item
+      else
+        a(href="#")=item
+        span /
+

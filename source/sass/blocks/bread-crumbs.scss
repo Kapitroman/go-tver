@@ -1,0 +1,15 @@
+.bread-crumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  color: $color-black;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+
+  @include vp-767 {
+    font-size: 12px;
+  }
+}
