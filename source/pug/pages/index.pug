@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Go-Tver.ru." //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
@@ -12,47 +12,10 @@ block variables
 
 block main
   main
-    //-h1.visually-hidden Путеводитель по Твеpской области
+
     +navigator-location()
     +popular-touring()
     +popular-articles()
     +tag-search()
-    //-.container
-      +categories-links()
-
-    //- на странице запрещен "голый" код
-    //- все блоки вставляются из папки pug/components/blocks
-    //-+popular-touring-item({
-      picture: "tour-01",
-      text: "Рыбалка"
-    //-})
-    //-+news-item({
-      class: "blue",
-      picture: "news-01",
-      datetime: "2024-05-21",
-      datestring: "21 мая 2024",
-      title: "Что посмотреть в Твери зимой",
-      description: "Господа, убеждённость некоторых оппонентов требует определения и уточнения форм воздействия. Каждый из нас понимает очевидную вещь: консультация с широким активом воздействия.",
-      labels: ["Что посмотреть", "Время чтения: 8 минут"]
-    //-})
-    //-+intro()
-    //-+intro()
-    //-+intro()
-    //-+intro()
-    //-+intro()
-    //-+menu-button()
-    //-.is-open
-      +menu-button()
-    //-+user-navigation-item({
-      class: "red",
-      images: ["image-01", "image-02", "image-03"],
-      title: "Топ",
-      info: "+8 историй"
-    //-})
-    //-.container
-      +menu-user-navigation()
-    //-+socials()
-    //-+call-support()
-    //-+search().search--mobile
 
 block modals
