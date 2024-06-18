@@ -3,10 +3,11 @@ mixin news-item(options)
     .news-item__picture
       +picture("content/news", options.picture, "png", 216, 320, "фото новости", true)
     .news-item__overlay
-    a(href="#").news-item__text
-      time(datetime=options.datetime)=options.datestring
-      p.news-item__title=options.title
-      p.news-item__description=options.description
+    .news-item__text
+      a(href="#").news-item__text-wrapper
+        time(datetime=options.datetime)=options.datestring
+        p.news-item__title=options.title
+        p.news-item__description=options.description
       .news-item__labels
         each item in options.labels
           +label-item(item)
