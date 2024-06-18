@@ -1,0 +1,10 @@
+mixin logo-footer()
+  if(currentUrl === "index.html")
+    .logo&attributes(attributes)
+      img(src="./img/svg/logo-footer.svg", width=204, height=32, loading="lazy")
+      p.logo__text Главный туристический портал Тверской области
+  else
+    a.logo(href="index.html", aria-label="Переход на главную")&attributes(attributes)
+      img(src="./img/svg/logo-footer.svg", width=204, height=32, loading="lazy")
+      p.logo__text Главный туристический портал Тверской области
+
