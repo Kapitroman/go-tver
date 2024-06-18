@@ -1,7 +1,10 @@
-.news-item {
+.card-item {
   display: grid;
 
-  width: 456px;
+  background-color: brown;
+
+  //width: 456px;
+  width: calc((100% - 2 * 24px) / 3); //// временно
   aspect-ratio: 456 / 278;
   border-radius: 36px;
 
@@ -14,7 +17,7 @@
   }
 
   @include hover-focus {
-    .news-item__overlay {
+    .card-item__overlay {
       background-image: linear-gradient(180deg, rgba(39, 41, 46, 0.2) 0%, rgba(39, 41, 46, 0.6) 100%);
     }
   }
@@ -45,25 +48,16 @@
     margin: 30px;
     margin-top: auto;
 
-    color: $color-white;
-
     @include vp-767 {
       margin: 20px;
       margin-top: auto;
     }
   }
 
-  time {
-    margin-bottom: 4px;
+  &__text-wrapper {
+    margin-bottom: 12px;
 
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 140%;
-    opacity: 0.6;
-
-    @include vp-767 {
-      font-size: 12px;
-    }
+    color: $color-white;
   }
 
   &__title {
@@ -86,7 +80,7 @@
 
   &__description {
     margin: 0;
-    margin-bottom: 12px;
+    //margin-bottom: 12px;
 
     font-size: 16px;
     line-height: 150%;
@@ -101,30 +95,18 @@
     }
   }
 
-  &__labels {
+  &__info-panel {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 8px;
   }
 
-  &__label {
-    margin: 0;
-    padding: 4px 12px;
-    border-radius: 20px;
-
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 140%;
-
-    color: rgba($color-white, 0.6);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-
-    @include vp-767 {
-      padding: 2px 8px;
-
-      font-size: 12px;
-    }
+  &__labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   &__favorite {

@@ -1,0 +1,16 @@
+mixin card-item(options)
+  .card-item&attributes(attributes)
+    .card-item__picture
+      +picture("content/cards", options.picture, "png", 216, 320, "фото новости", true)
+    .card-item__overlay
+    .card-item__text
+      a(href="#").card-item__text-wrapper
+        p.card-item__title=options.title
+        p.card-item__description=options.description
+      .card-item__info-panel
+        .card-item__labels
+          each item in options.labels
+            +label-item(item)
+        .activity
+    button(type=button).card-item__favorite
+      +icon("heart", 24, 24)
