@@ -1,0 +1,14 @@
+.plan-ideal-tour {
+  .main-title {
+    margin-bottom: 40px;
+
+    @include vp-767 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .card-item {
+    width: calc((100% - 2 * 24px) / 3);
+  }
+
+}
