@@ -1,0 +1,7 @@
+mixin tag-item(options={})
+  - const text = options.text ? options.text: "Другое"
+  - const color = options.color ? options.color : "black"
+
+  a(href="#", data-tag=options.text, data-color=options.color).tag-item&attributes(attributes)
+    +icon("tag", 16, 16)
+    span=options.text

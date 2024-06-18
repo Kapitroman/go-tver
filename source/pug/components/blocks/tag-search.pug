@@ -1,5 +1,52 @@
 mixin tag-search()
-  - const tags = ["Интересные факты", "Места для отдыха в Твери", "Мосты в Твери", "Музеи Твери", "Музеи Торжка", "Памятники в Твери", "Парки в Твери", "Театры в Твери", "Улицы Твери", "Церкви в Твери", "Интересные факты"]
+  -
+    const tags = [
+      {
+        text: "Интересные факты",
+        color: "purple"
+      },
+      {
+        text: "Места для отдыха в Твери",
+        color: "purple"
+      },
+      {
+        text: "Мосты в Твери",
+        color: "purple"
+      },
+      {
+        text: "Музеи Твери",
+        color: "purple"
+      },
+      {
+        text: "Музеи Торжка",
+        color: "purple"
+      },
+      {
+        text: "Памятники в Твери",
+        color: "purple"
+      },
+      {
+        text: "Парки в Твери",
+        color: "purple"
+      },
+      {
+        text: "Театры в Твери",
+        color: "purple"
+      },
+      {
+        text: "Улицы Твери",
+        color: "purple"
+      },
+      {
+        text: "Церкви в Твери",
+        color: "purple"
+      },
+      {
+        text: "Интересные факты",
+        color: "purple"
+      }
+    ];
+
   section.tag-search
     .container
       +main-title({
@@ -8,7 +55,7 @@ mixin tag-search()
       })
       .tag-search__wrapper
         each item in tags
-          +tag(item)
+          +tag-item(item)
         +main-btn({
           icon: "arrow-black",
           text: "Посмотреть всё"
