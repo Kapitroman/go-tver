@@ -26,6 +26,6 @@ mixin news-item(options)
       p.news-item__description=options.description
       .news-item__labels
         each item in options.labels
-          p.news-item__label=item
+          +label-item(item)
     button(type=button).news-item__favorite
       +icon("heart", 24, 24)

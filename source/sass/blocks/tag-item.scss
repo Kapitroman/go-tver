@@ -36,12 +36,6 @@
     }
   }
 
-  &[data-color="red"] {
-    svg {
-      color: $color-red;
-    }
-  }
-
   &[data-color="blue"] {
     svg {
       color: $color-blue;

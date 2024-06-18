@@ -1,0 +1,5 @@
+mixin label-item(options={})
+  - const text = options.text ? options.text: "Другое"
+  - const color = options.color ? options.color : "black"
+
+  p(data-tag=options.text, data-color=options.color).label-item&attributes(attributes)=options.text
