@@ -1,0 +1,57 @@
+.btn-change-count {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $color-black;
+
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+
+  cursor: pointer;
+
+  transition: background-color $trans-default;
+
+  @include vp-767 {
+    width: 44px;
+    height: 44px;
+  }
+
+  span {
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+
+    background-color: $color-white;
+
+    transition: background-color $trans-default, opacity $trans-default;
+  }
+
+  span:last-child {
+    transform: rotate(90deg);
+  }
+
+  @include hover-focus {
+    background-color: $color-green;
+
+    span {
+      background-color: $color-black;
+    }
+  }
+
+  &:active {
+    background-color: $color-black;
+
+    span {
+      background-color: $color-white;
+    }
+    span:last-child {
+      opacity: 0;
+    }
+  }
+}
