@@ -1,0 +1,62 @@
+.intro {
+  background-color: brown;
+
+  background-image: linear-gradient(rgba(39, 41, 46, 0.7), rgba(39, 41, 46, 0.7)), url("../img/content/tver-full.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include retina {
+    background-image: linear-gradient(rgba(39, 41, 46, 0.7), rgba(39, 41, 46, 0.7)), url("../img/content/tver-full@2x.webp");
+  }
+
+  &__info {
+    overflow: hidden;
+
+    padding: 60px 0;
+    min-height: 420;
+
+    color: $color-white;
+
+    @include vp-767 {
+      padding: 40px 0;
+      min-height: 337px;
+    }
+  }
+
+  &__text {
+    max-width: 576px;
+    margin-bottom: 60px;
+
+    @include vp-767 {
+      max-width: 320px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+
+    font-family: ff-pt;
+    font-size: 80px;
+    line-height: 130%;
+
+    @include vp-767 {
+      font-size: 40px;
+      line-height: 130%;
+    }
+  }
+
+  &__description {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 150%;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+}
