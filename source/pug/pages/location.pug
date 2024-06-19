@@ -16,10 +16,83 @@ block main
     +intro()
     //-+btn-showmore-round()
     .container
+      +tag-panel([
+        {
+          text: "Отели Твери",
+          color: "red",
+          active: true
+        },
+        {
+          text: "Кафе Твери",
+          color: "green"
+        },
+        {
+          text: "Достопримечательности Твери",
+          color: "purple"
+        },
+        {
+          text: "Маршруты Твери",
+          color: "blue"
+        },
+        {
+          text: "Кафе Твери",
+          color: "green"
+        },
+        {
+          text: "Маршруты Твери",
+          color: "blue"
+        },
 
+        {
+          text: "Памятники в Твери",
+          color: "purple"
+        },
+        {
+          text: "Парки в Твери",
+          color: "purple"
+        },
+        {
+          text: "Театры в Твери",
+          color: "purple"
+        },
+        {
+          text: "Улицы Твери",
+          color: "purple"
+        },
+        {
+          text: "Церкви в Твери",
+          color: "purple"
+        },
+        {
+          text: "Интересные факты",
+          color: "purple"
+        }
+      ])
 
-      div(data-showmore).block
-        div(data-showmore-content="200").block__content
+    //-.container
+      +tag-panel([
+        {
+          text: "Отели Твери",
+          color: "red",
+          active: true
+        },
+        {
+          text: "Кафе Твери",
+          color: "green"
+        },
+        {
+          text: "Достопримечательности Твери",
+          color: "purple"
+        },
+        {
+          text: "Маршруты Твери",
+          color: "blue"
+        },
+      ])
+
+    //-.container
+      div(data-showmore="items").block
+        div(data-showmore-content="3").block__content
           p hgshgdf gh hgfsdgv fsdhh fdghhfugfjds fuhujfdhsgfduh vsfhug gdhgfhfgsdfyhgvh gg yhgv sdyfugvsfdu hvbsufh sfubhsubhsubh subhubh s yghvufs hguh gsu hguhg u fb ghvyghuwf
           p hgshgdf gh hgfsdgv fsdhh fdghhfugfjds fuhujfdhsgfduh vsfhug gdhgfhfgsdfyhgvh gg yhgv sdyfugvsfdu hvbsufh sfubhsubhsubh subhubh s yghvufs hguh gsu hguhg u fb ghvyghuwf
           p hgshgdf gh hgfsdgv fsdhh fdghhfugfjds fuhujfdhsgfduh vsfhug gdhgfhfgsdfyhgvh gg yhgv sdyfugvsfdu hvbsufh sfubhsubhsubh subhubh s yghvufs hguh gsu hguhg u fb ghvyghuwf
@@ -42,4 +115,27 @@ block main
           span Показать еще
           span Спрятать
 
+    //-.container
+      div(data-showmore="items").block
+        div(data-showmore-content="6").block__content
+          p hgshgdf gh hgfsdgv fsdhh fdghhfugfjds fuhujfdhsgfduh vsfhug gdhgfhfgsdfyhgvh gg yhgv sdyfugvsfdu hvbsufh sfubhsubhsubh subhubh s yghvufs hguh gsu hguhg u fb ghvyghuwf
+          p hgshgdf gh hgfsdgv fsdhh fdghhfugfjds fuhujfdhsgfduh vsfhug gdhgfhfgsdfyhgvh gg yhgv sdyfugvsfdu hvbsufh sfubhsubhsubh subhubh s yghvufs hguh gsu hguhg u fb ghvyghuwf
+          p hgshgdf gh hgfsdgv fsdhh fdghhfugfjds fuhujfdhsgfduh vsfhug gdhgfhfgsdfyhgvh gg yhgv sdyfugvsfdu hvbsufh sfubhsubhsubh subhubh s yghvufs hguh gsu hguhg u fb ghvyghuwf
+
+
+
+        button(hidden data-showmore-button type="button").block__more
+          span Показать еще
+          span Спрятать
+
+
+      div(data-showmore="items").block
+        div(data-showmore-content="6").block__content
+          p hgshgdf gh hgfsdgv fsdhh fdghhfugfjds fuhujfdhsgfduh vsfhug gdhgfhfgsdfyhgvh gg yhgv sdyfugvsfdu hvbsufh sfubhsubhsubh subhubh s yghvufs hguh gsu hguhg u fb ghvyghuwf
+
+
+
+        button(hidden data-showmore-button type="button").block__more
+          span Показать еще
+          span Спрятать
 block modals

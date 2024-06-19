@@ -1,0 +1,26 @@
+.tag-panel {
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: start;
+    gap: 12px;
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  @include vp-767 {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    width: auto;
+
+    @media (min-width: 768px) {
+      height: auto;
+    }
+  }
+}

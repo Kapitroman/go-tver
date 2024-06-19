@@ -13,6 +13,8 @@ import {initPopularTouringSlider} from './modules/init-popular-touring-slider';
 import {initPopularArticlesSlider} from './modules/init-popular-articles-slider';
 import {initCategoriesLinksSlider} from './modules/init-categories-links-slider';
 import {initHeroSlider} from './modules/init-hero-slider';
+import {initTagPanelSlider} from './modules/init-tag-panel-slider';
+
 import * as flsFunctions from "./modules/functions.js";
 
 // ---------------------------------
@@ -50,6 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initPopularArticlesSlider();
     initCategoriesLinksSlider();
     initHeroSlider();
+    initTagPanelSlider();
 
   });
 });

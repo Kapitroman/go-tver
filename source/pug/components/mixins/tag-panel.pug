@@ -1,0 +1,9 @@
+mixin tag-panel(options)
+  .tag-panel.swiper(data-showmore="items", data-showmore-media="768,min")&attributes(attributes)
+    .tag-panel__wrapper.swiper-wrapper(data-showmore-content="1")
+      each item in options
+        if item.active
+          +tag-item(item).active.swiper-slide
+        else
+          +tag-item(item).swiper-slide
+    +btn-showmore-round()

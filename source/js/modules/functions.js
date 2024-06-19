@@ -436,12 +436,10 @@ export function menuClose() {
 }
 // Модуль "показать еще" ============================================= ================================================== ================================================== ================================================== ====================
 export function showMore() {
-  console.log('aaa');
 	window.addEventListener("load", function (e) {
 		const showMoreBlocks = document.querySelectorAll('[data-showmore]');
 		let showMoreBlocksRegular;
 		let mdQueriesArray;
-    console.log('bbb');
 		if (showMoreBlocks.length) {
 			// Получение обычных объектов
 			showMoreBlocksRegular = Array.from(showMoreBlocks).filter(function (item, index, self) {
