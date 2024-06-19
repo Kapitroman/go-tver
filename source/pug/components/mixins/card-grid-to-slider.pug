@@ -1,0 +1,6 @@
+mixin card-grid-to-slider(options)
+  .card-grid-to-slider.swiper
+    .card-grid-to-slider__wrapper.swiper-wrapper
+      each item in options
+        +card-item(item).swiper-slide
+      +add-item()

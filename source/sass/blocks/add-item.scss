@@ -1,0 +1,44 @@
+.add-item {
+  display: flex;
+  flex-direction: column;
+
+  padding: 36px;
+  border: 1px solid $color-sep;
+  border-radius: 36px;
+
+  @include vp-767 {
+    display: none;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+
+    font-family: $ff-pt;
+    font-size: 24px;
+    line-height: 130%;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__description {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    line-height: 150%;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .main-btn {
+    margin-top: auto;
+    margin-right: auto;
+  }
+}

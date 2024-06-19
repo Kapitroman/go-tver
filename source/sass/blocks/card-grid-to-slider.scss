@@ -1,0 +1,38 @@
+.card-grid-to-slider {
+  @media (min-width: 768px) {
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    /*
+    & > * {
+      width: calc((100% - 2 * 24px) / 3);
+
+      @include vp-1279 {
+        width: calc((100% - 24px) / 2);
+      }
+    }
+    */
+
+    .card-item {
+      width: calc((100% - 2 * 24px) / 3);
+
+      @include vp-1279 {
+        width: calc((100% - 24px) / 2);
+      }
+    }
+
+    .add-item {
+      width: calc((100% - 2 * 24px) / 3);
+
+      @include vp-1279 {
+        width: calc((100% - 24px) / 2);
+      }
+
+      .main-btn {
+        display: flex;
+      }
+    }
+  }
+}

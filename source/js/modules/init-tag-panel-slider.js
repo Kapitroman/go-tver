@@ -1,4 +1,4 @@
-const breakpoint = window.matchMedia('(min-width:767px)');
+const breakpoint = window.matchMedia('(min-width:768px)');
 const tagPanelSlider = document.querySelector('.tag-panel');
 let swiper;
 
