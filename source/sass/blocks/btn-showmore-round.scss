@@ -1,4 +1,4 @@
-.btn-change-count {
+.btn-showmore-round {
   position: relative;
 
   display: flex;
@@ -44,12 +44,7 @@
     }
   }
 
-  &:active {
-    background-color: $color-black;
-
-    span {
-      background-color: $color-white;
-    }
+  ._showmore-active & {
     span:last-child {
       opacity: 0;
     }
