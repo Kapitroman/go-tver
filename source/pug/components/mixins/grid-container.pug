@@ -1,0 +1,9 @@
+mixin grid-container(items, params)
+  div(data-showmore="items").grid-container&attributes(attributes)
+    div(data-showmore-content="5").grid-container__inner
+      each item in items
+        +card-item(item)
+    button(hidden data-showmore-button type="button").grid-container__more-button
+      +icon("arrow-more", 24, 24)
+      span.grid-container__more Показать еще
+      span.grid-container__less Спрятать
