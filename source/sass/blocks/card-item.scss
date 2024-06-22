@@ -4,7 +4,6 @@
   background-color: brown;
 
   width: 456px;
-  // width: calc((100% - 2 * 24px) / 3); //// временно
   aspect-ratio: 456 / 278;
   border-radius: 36px;
 
@@ -80,7 +79,6 @@
 
   &__description {
     margin: 0;
-    //margin-bottom: 12px;
 
     font-size: 16px;
     line-height: 150%;
@@ -109,26 +107,15 @@
     gap: 8px;
   }
 
-  &__favorite {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid $color-sep;
+  .action-item {
     margin-top: 24px;
     margin-right: 24px;
     margin-left: auto;
     margin-bottom: auto;
 
-    background-color: $color-bg;
-    cursor: pointer;
-
-    svg {
-      width: 24px;
-      height: 24px;
+    @include vp-767 {
+      margin-top: 20px;
+      margin-right: 20px;
     }
   }
 }

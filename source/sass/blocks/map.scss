@@ -1,0 +1,11 @@
+#map {
+  width: 100%;
+  height: 560px;
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  @include vp-767 {
+    height: 480px;
+  }
+}

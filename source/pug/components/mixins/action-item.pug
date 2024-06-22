@@ -1,0 +1,6 @@
+mixin action-item(options)
+  button(type="button").action-item&attributes(attributes)
+    span.action-item__icon
+      +icon(options.icon, 24, 24)
+    if (options.text)
+      span.action-item__text=options.text

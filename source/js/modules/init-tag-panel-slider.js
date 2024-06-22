@@ -1,29 +1,32 @@
 const breakpoint = window.matchMedia('(min-width:768px)');
-const tagPanelSlider = document.querySelector('.tag-panel');
-let swiper;
+const tagPanelSliders = document.querySelectorAll('.tag-panel');
+const swipers = [];
 
 const initSwiper = (slider) => {
   // eslint-disable-next-line no-undef
 
-  swiper = new Swiper(slider, {
+  let swiper = new Swiper(slider, {
     slidesPerView: "auto",
     freeMode: true,
     spaceBetween: 12,
   });
+  swipers.push(swiper);
 };
 
 const initTagPanelSlider = () => {
-  if (!tagPanelSlider) {
+  if (tagPanelSliders.length === 0) {
     return;
   }
 
   const breakpointChecker = () => {
     if (breakpoint.matches) {
-      if (swiper) {
-        swiper.destroy(true, true);
-      }
+      swipers.forEach((item) => {
+        if (item) {
+          item.destroy(true, true);
+        }
+      })
     } else {
-      initSwiper(tagPanelSlider);
+      tagPanelSliders.forEach((item) => initSwiper(item));
     }
   };
 

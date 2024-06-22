@@ -1,0 +1,21 @@
+.activity-panel {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-txt2;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

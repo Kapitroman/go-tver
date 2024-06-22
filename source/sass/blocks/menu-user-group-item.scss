@@ -42,3 +42,17 @@
     margin-left: 12px;
   }
 }
+
+.menu-user-group-item--favorire {
+  .menu-user-group-item__icon {
+    fill: $color-white;
+    stroke: $color-black;
+  }
+}
+
+.menu-user-group-item--favorire.has-favorite {
+  .menu-user-group-item__icon {
+    stroke: #F54949;
+    fill: #F54949;
+  }
+}

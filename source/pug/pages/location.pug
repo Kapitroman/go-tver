@@ -8,6 +8,7 @@ block variables
   - const hasFooter = true
   - const footerMods = ""
   - const authorization = false
+  - const map = true
 
 block main
   main
@@ -15,80 +16,8 @@ block main
       +bread-crumbs(["Главная", "Тверь"])
     +intro()
     +plan-ideal-tour()
-    //-.container
-      +tag-panel([
-        {
-          text: "Отели Твери",
-          color: "red",
-          active: true
-        },
-        {
-          text: "Кафе Твери",
-          color: "green"
-        },
-        {
-          text: "Достопримечательности Твери",
-          color: "purple"
-        },
-        {
-          text: "Маршруты Твери",
-          color: "blue"
-        },
-        {
-          text: "Кафе Твери",
-          color: "green"
-        },
-        {
-          text: "Маршруты Твери",
-          color: "blue"
-        },
-
-        {
-          text: "Памятники в Твери",
-          color: "purple"
-        },
-        {
-          text: "Парки в Твери",
-          color: "purple"
-        },
-        {
-          text: "Театры в Твери",
-          color: "purple"
-        },
-        {
-          text: "Улицы Твери",
-          color: "purple"
-        },
-        {
-          text: "Церкви в Твери",
-          color: "purple"
-        },
-        {
-          text: "Интересные факты",
-          color: "purple"
-        }
-      ])
-
-    //-.container
-      +tag-panel([
-        {
-          text: "Отели Твери",
-          color: "red",
-          active: true
-        },
-        {
-          text: "Кафе Твери",
-          color: "green"
-        },
-        {
-          text: "Достопримечательности Твери",
-          color: "purple"
-        },
-        {
-          text: "Маршруты Твери",
-          color: "blue"
-        },
-      ])
+    +tag-search()
+    +article()
 
     //-.container
       div(data-showmore="items").block

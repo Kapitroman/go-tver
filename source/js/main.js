@@ -15,6 +15,10 @@ import {initCategoriesLinksSlider} from './modules/init-categories-links-slider'
 import {initHeroSlider} from './modules/init-hero-slider';
 import {initTagPanelSlider} from './modules/init-tag-panel-slider';
 import {initCardGridToSlider} from './modules/init-card-grid-to-slider';
+import {initYM} from './modules/init-map';
+import {toggleFavorite} from './modules/toggle-favorite';
+
+//import loadAndInitMap from "./modules/map.js";
 
 import * as flsFunctions from "./modules/functions.js";
 
@@ -55,6 +59,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initHeroSlider();
     initTagPanelSlider();
     initCardGridToSlider();
+    initYM();
+    toggleFavorite();
 
   });
 });

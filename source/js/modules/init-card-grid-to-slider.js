@@ -10,7 +10,9 @@ const initSwiper = (slider) => {
     spaceBetween: 16,
     breakpoints: {
       560: {
-        spaceBetween: 16,
+        slidesPerView: 1.5,
+      },
+      768: {
         slidesPerView: 2,
       },
     },
@@ -19,6 +21,8 @@ const initSwiper = (slider) => {
       prevEl: slider.closest('section').querySelector('.swiper-button-prev'),
     },
   });
+
+  console.log('init');
 };
 
 const initCardGridToSlider = () => {
@@ -30,8 +34,10 @@ const initCardGridToSlider = () => {
     if (breakpoint.matches) {
       if (swiper) {
         swiper.destroy(true, true);
+        console.log('destroy');
       }
     } else {
+      console.log('before init')
       initSwiper(cardGridToSlider);
     }
   };

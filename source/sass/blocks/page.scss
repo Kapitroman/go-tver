@@ -14,7 +14,8 @@ main {
   }
 }
 
-section {
+section,
+article {
   margin-bottom: 120px;
 
   @include vp-767 {
