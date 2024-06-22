@@ -59,6 +59,8 @@
 @import "blocks/action-item";
 @import "blocks/activity-panel";
 @import "blocks/articles-slider";
+@import "blocks/object-select";
+@import "blocks/filter-panel";
 
 @import "blocks/data-tabs";
 
@@ -72,8 +74,7 @@
 @import "blocks/article";
 @import "blocks/tags-additional";
 @import "blocks/see-also";
-@import "blocks/object-select";
-
+@import "blocks/where-to-stay";
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg

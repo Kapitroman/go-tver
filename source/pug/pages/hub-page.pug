@@ -13,11 +13,12 @@ block variables
 block main
   main
     .container
-      +bread-crumbs(["Главная", "Тверь", "Что посмотреть", "Что посмотреть в Твери зимой"])
-    +article()
+      +bread-crumbs(["Главная", "Тверь", "Где остановиться"])
+
+    +where-to-stay()
     +tags-additional()
     +see-also()
-
+    +article()
     //-.container
       .www
         +custom-select({

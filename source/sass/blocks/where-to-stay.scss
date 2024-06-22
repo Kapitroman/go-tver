@@ -1,0 +1,13 @@
+.where-to-stay {
+  .container {
+    overflow: hidden;
+  }
+
+  .main-title {
+    margin-bottom: 60px;
+
+    @include vp-767 {
+      margin-bottom: 8px;
+    }
+  }
+}

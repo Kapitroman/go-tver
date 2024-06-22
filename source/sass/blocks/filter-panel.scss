@@ -1,0 +1,22 @@
+.filter-panel {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(red, 0.3);
+  margin-right: -24px;
+
+  @include vp-767 {
+    margin-right: 0;
+    flex-direction: column;
+    justify-content: initial;
+  }
+
+  .custom-select {
+    width: 220px;
+    margin-left: 20px;
+
+    @include vp-767 {
+      width: 360px;
+      margin-left: 0;
+    }
+  }
+}
