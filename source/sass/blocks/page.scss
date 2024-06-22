@@ -22,3 +22,12 @@ article {
     margin-bottom: 80px;
   }
 }
+
+.www {
+  width: 220px;
+  height: 350px;
+
+  @include vp-767 {
+    width: 360px;
+  }
+}

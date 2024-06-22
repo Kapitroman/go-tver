@@ -282,6 +282,11 @@ export class CustomSelect {
     const button = this._selectElement.querySelector('.custom-select__button');
     const selectItems = this._selectElement.querySelectorAll('.custom-select__item');
 
+    const selectList = this._selectElement.querySelector('.custom-select__list');
+    const selectOpenHight = button.offsetHeight + selectList.offsetHeight;
+    console.log(selectOpenHight);
+    this._selectElement.style.setProperty('--select-height', `${selectOpenHight}px`);
+
     button.addEventListener('click', this._onSelectClick);
     button.addEventListener('keydown', this._onSelectKeydown);
 
