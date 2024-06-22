@@ -1,0 +1,49 @@
+mixin tags-additional()
+  -
+    const tags = [
+      {
+        text: "Достопримечательности Ржева",
+        color: "red"
+      },
+      {
+        text: "Кафе Ржева",
+        color: "purple"
+      },
+      {
+        text: "Маршруты Ржева",
+        color: "green"
+      },
+      {
+        text: "Кафе Ржева",
+        color: "purple"
+      },
+      {
+        text: "Достопримечательности Ржева",
+        color: "red"
+      },
+      {
+        text: "Маршруты Ржева",
+        color: "green"
+      },
+      {
+        text: "Кафе Ржева",
+        color: "purple"
+      },
+      {
+        text: "Достопримечательности Ржева",
+        color: "red"
+      },
+    ];
+
+  section.tags-additional
+    .container
+      +main-title({
+        title: "Дополнительные теги",
+      })
+      .tags-additional__wrapper
+        each item in tags
+          +tag-item(item)
+        +main-btn({
+          icon: "arrow-black",
+          text: "Все туристические места Твери"
+        })

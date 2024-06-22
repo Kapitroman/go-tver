@@ -17,6 +17,7 @@ import {initTagPanelSlider} from './modules/init-tag-panel-slider';
 import {initCardGridToSlider} from './modules/init-card-grid-to-slider';
 import {initYM} from './modules/init-map';
 import {toggleFavorite} from './modules/toggle-favorite';
+import {initArticlesSlider} from './modules/init-articles-slider';
 
 //import loadAndInitMap from "./modules/map.js";
 
@@ -61,6 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initCardGridToSlider();
     initYM();
     toggleFavorite();
+    initArticlesSlider();
 
   });
 });

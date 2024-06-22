@@ -1,0 +1,19 @@
+.tags-additional {
+  .main-title {
+    margin-bottom: 40px;
+
+    @include vp-767 {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    @include vp-767 {
+      column-gap: 12px;
+    }
+  }
+}
