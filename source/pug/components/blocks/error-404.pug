@@ -1,0 +1,11 @@
+mixin error-404()
+  .error-404
+    .error-404__wrapper
+      img(src="./img/svg/error-404.svg", width="450", height="450", alt="error")
+      .error-404__info
+        h1.error-404__title Упс! Такую страницу не удалось найти
+        p.error-404__description К сожалению, страница, которую Вы запросили, не найдена. Она может быть временно недоступна, перемещена или удалена.
+        +main-btn({
+          icon: "arrow-black",
+          text: "Вернуться на главную"
+        })

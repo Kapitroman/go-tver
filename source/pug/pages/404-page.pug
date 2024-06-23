@@ -1,0 +1,18 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Go-Tver.ru. Страница - 404." //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const authorization = false
+  - const map = false
+
+block main
+  main
+    .container
+      +error-404()
+
+block modals
