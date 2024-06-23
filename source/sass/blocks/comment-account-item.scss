@@ -3,12 +3,25 @@
   border-radius: 24px;
   border: 1px solid $color-sep;
 
+  @include vp-767 {
+    border-radius: 16px;
+    padding: 18px 20px;
+  }
+
   &__head {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 
     margin-bottom: 8px;
+
+    @include vp-767 {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 8px;
+    }
   }
 
   &__head-main {
@@ -17,6 +30,11 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__action {
@@ -34,12 +52,15 @@
   }
 
   time {
-    margin-left: 20px;
-
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
     color: #939599;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 17px;
+    }
   }
 
   &__text {
@@ -52,5 +73,10 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 }

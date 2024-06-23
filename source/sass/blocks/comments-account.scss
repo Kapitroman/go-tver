@@ -5,5 +5,11 @@
     gap: 24px;
 
     margin-bottom: 24px;
+
+    @include vp-767 {
+      gap: 16px;
+
+      margin-bottom: 16px;
+    }
   }
 }
