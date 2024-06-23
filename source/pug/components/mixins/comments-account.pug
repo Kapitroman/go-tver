@@ -1,0 +1,62 @@
+mixin comments-account()
+  -
+    const comments = [
+      {
+        action: "прокомментировали",
+        link: "Отель Viewpoint Hotel"
+      },
+      {
+        action: "ответили",
+        link: "Мария"
+      },
+      {
+        action: "прокомментировали",
+        link: "Отель Viewpoint Hotel"
+      },
+      {
+        action: "ответили",
+        link: "Мария"
+      },
+      {
+        action: "прокомментировали",
+        link: "Отель Viewpoint Hotel"
+      },
+      {
+        action: "ответили",
+        link: "Мария"
+      },
+
+      {
+        action: "прокомментировали",
+        link: "Отель Viewpoint Hotel"
+      },
+      {
+        action: "ответили",
+        link: "Мария"
+      },
+      {
+        action: "прокомментировали",
+        link: "Отель Viewpoint Hotel"
+      },
+      {
+        action: "ответили",
+        link: "Мария"
+      },
+      {
+        action: "прокомментировали",
+        link: "Отель Viewpoint Hotel"
+      },
+      {
+        action: "ответили",
+        link: "Мария"
+      }
+    ]
+
+  div(data-showmore="items").comments-account&attributes(attributes)
+    div(data-showmore-content="5").comments-account__inner
+      each item in comments
+        +comment-account-item(item)
+    button(hidden data-showmore-button type="button").comments-account__more-button
+      +icon("arrow-more", 24, 24)
+      span.comments-account__more Показать еще
+      span.comments-account__less Спрятать

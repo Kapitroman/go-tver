@@ -1,0 +1,20 @@
+mixin comment-account-item(options)
+  .comment-account-item
+    .comment-account-item__head
+      p.comment-account-item__head-main
+        span.comment-account-item__you Вы,
+        =" "
+        span.comment-account-item__action=options.action
+        =" "
+        a(href="#").comment-account-item__link
+          span=options.link
+          =" "
+          +icon("link", 12, 12)
+      time(datetime="2024-05-8") 8 мая 2024
+    p.comment-account-item__text
+      | В частности, повышение уровня гражданского сознания выявляет срочную потребность
+      | соответствующих условий активизации. Современные технологии достигли такого уровня,
+      | что постоянный количественный рост и сфера нашей активности позволяет выполнить важные
+      | задания по разработке стандартных подходов. Учитывая ключевые сценарии поведения,
+      | перспективное планирование играет определяющее значение для позиций, занимаемых
+      | участниками в отношении поставленных задач.

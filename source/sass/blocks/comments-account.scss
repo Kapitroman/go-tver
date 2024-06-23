@@ -1,0 +1,59 @@
+.comments-account {
+    &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    margin-bottom: 24px;
+  }
+
+  &__more-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: 100%;
+    min-height: 48px;
+    border-radius: 24px;
+    padding: 11px 20px;
+    border: 1px solid $color-sep;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+
+    background-color: $color-transparent;
+    cursor: pointer;
+    transition: opacity $trans-default;
+
+    @include vp-767 {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 21px;
+    }
+
+    @include hover-focus {
+      opacity: 0.7;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__less {
+    display: none;
+  }
+
+  &._showmore-active {
+    .grid-container__less {
+      display: block;
+    }
+
+    .grid-container__more {
+      display: none;
+    }
+  }
+}
