@@ -85,3 +85,13 @@
     }
   }
 }
+
+.grid-container--account {
+  .grid-container__inner {
+    grid-template-columns: 1fr 1fr;
+
+    @include vp-1279 {
+      grid-template-columns: 1fr;
+    }
+  }
+}

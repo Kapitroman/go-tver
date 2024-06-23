@@ -53,16 +53,23 @@ export class Tabs {
   }
 
   _setTabStartState(tab, dataHeight, tabElements, tabContentElement, tabControlElements, dataDelay) {
+    console.log(tab);
     const activeIndex = this._returnActiveIndex(tabControlElements);
     const blockHeight = dataHeight === 'max' ? this._returnMaxHeight(tabElements) : tabElements[activeIndex].offsetHeight;
     this._removeAllActiveClasses(tabControlElements, tabElements);
     tab.classList.add('no-transition');
-    // tabControlElements[activeIndex].classList.add('is-active');
-    // tabElements[activeIndex].classList.add('is-active');
-    if (dataHeight !== 'unset') {
-      //  tabContentElement.style.height = `${blockHeight}px`;
-      tabContentElement.style.height = 0; ////
+    if (tab.hasAttribute('data-tabs-total')) {
+      tabControlElements[activeIndex].classList.add('is-active');
+      tabElements[activeIndex].classList.add('is-active');
+      if (dataHeight !== 'unset') {
+        tabContentElement.style.height = `${blockHeight}px`;
+      }
+    } else {
+      if (dataHeight !== 'unset') {
+        tabContentElement.style.height = 0; ////
+      }
     }
+
     setTimeout(() => {
       if (dataDelay) {
         tab.classList.remove('no-transition');

@@ -1,0 +1,215 @@
+.my-account {
+  &__title {
+    margin: 0;
+    margin-bottom: 50px;
+
+    font-family: $ff-pt;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 130%;
+
+    @include vp-767 {
+      margin-bottom: 30px;
+
+      font-family: $ff-pt;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 52px;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+
+    max-width: 100%;
+
+    @include vp-767 {
+      flex-direction: column;
+    }
+  }
+
+  &__menu {
+    width: 28.25%;
+    margin-right: 5.65%;
+    margin-bottom: auto;
+    border-radius: 36px;
+
+    background-color: #F2F1F0;
+
+    overflow: hidden;
+
+    @include vp-1023 {
+      width: 35%;
+      margin-right: 5%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 36px;
+    padding-bottom: 23px;
+    border: 1px solid $color-bg;
+  }
+
+  &__user-avatar {
+    flex-shrink: 0;
+
+    width: 60px;
+    height: 60px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+
+      object-fit: cover;
+    }
+  }
+
+  &__user-name {
+    margin: 0;
+    margin-bottom: 6px;
+
+    font-family:$ff-pt;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  &__user-status {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 20px;
+    color: #5C73E5;
+  }
+
+  &__navigation {
+    padding: 24px 0 16px 0;
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+
+    padding: 16px 20px 16px 32px;
+    border: none;
+    border-left: 4px solid $color-transparent;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+
+    background-color: $color-transparent;
+    cursor: pointer;
+    transition: border-color $trans-default, background-color $trans-default;
+
+    @include hover-focus {
+      background-color: $color-sep;
+    }
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      color: $color-black;
+    }
+
+    &.is-active {
+      pointer-events: none;
+    }
+
+    &.is-active:nth-child(1) {
+      border-color: $color-red;
+
+      svg {
+        fill: $color-red;
+        color: $color-red;
+      }
+    }
+
+    &.is-active:nth-child(2) {
+      border-color: $color-purple;
+
+      svg {
+        color: $color-purple;
+      }
+    }
+
+    &.is-active:nth-child(3) {
+      border-color: $color-green;
+
+      svg {
+        color: $color-green;
+      }
+    }
+
+    &.is-active:nth-child(4) {
+      border-color: $color-blue;
+
+      svg {
+        color: $color-blue;
+      }
+    }
+  }
+
+  &__exit {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 16px 36px;
+    padding-right: 20px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+
+    background-color: $color-transparent;
+    transition: background-color $trans-default;
+
+    @include hover-focus {
+      background-color: $color-sep;
+    }
+  }
+
+  &__content {
+    width: 66.1%;
+
+    transition: height 0.3s;
+
+    @include vp-1023 {
+      width: 60%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &__element {
+    width: 100%;
+  }
+}
