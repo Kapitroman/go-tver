@@ -1,4 +1,4 @@
-mixin where-to-stay
+mixin news()
   -
     const cards = [
       {
@@ -335,11 +335,12 @@ mixin where-to-stay
       },
     ]
 
-  section.where-to-stay
+  section.news
     .container
       +main-title-h1({
-        title: "Где остановится ",
+        title: "Новости",
         text: "Древний город на двух берегах Волги. Административный центр региона на пути из Москвы в Санкт-Петербург. Город, где 28 раз гостил Пушкин, родина знаменитого купца Афанасия Никитина и шансонье Михаила Круга."
       }).main-title--column
+      +articles-slider()
       +filter-panel()
       +grid-container(cards)

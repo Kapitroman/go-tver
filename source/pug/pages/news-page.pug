@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "Go-Tver.ru. Где остановиться" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Go-Tver.ru. Новости" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
@@ -13,11 +13,9 @@ block variables
 block main
   main
     .container
-      +bread-crumbs(["Главная", "Тверь", "Где остановиться"])
-
-    +where-to-stay()
+      +bread-crumbs(["Главная", "Новости",])
+    +news()
     +tags-additional()
-    +see-also()
     +article()
     //-.container
       .www

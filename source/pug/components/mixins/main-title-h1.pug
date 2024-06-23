@@ -1,0 +1,5 @@
+mixin main-title-h1(options)
+  .main-title&attributes(attributes)
+    h1!=options.title
+    if options.text
+      p.main-title__description!=options.text
