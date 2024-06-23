@@ -6,7 +6,4 @@ mixin grid-container(items, params = {})
           +card-item(item).is-favorite
         else
           +card-item(item)
-    button(hidden data-showmore-button type="button").grid-container__more-button
-      +icon("arrow-more", 24, 24)
-      span.grid-container__more Показать еще
-      span.grid-container__less Спрятать
+    +button-more()
