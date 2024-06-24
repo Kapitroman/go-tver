@@ -1,0 +1,91 @@
+mixin statictic-block-item()
+  .statictic-block-item
+    .statictic-block-item__object
+      .statictic-block-item__object-wrapper
+        .statictic-block-item__object-picture
+          +picture("content/cards", "card-01", "png", 96, 64, "фото объекта", true)
+        .statictic-block-item__object-wrapper-inner
+          .statictic-block-item__object-name
+            p.statictic-block-item__caption Название:
+            a(href="#").statictic-block-item__object-name-link
+              span Отель Viewpoint Hotel
+              +icon("link", 12, 12)
+          .statictic-block-item__object-category
+            p.statictic-block-item__caption Категория:
+            +label-item({
+              text: "Отели Твери",
+              color: "red"
+            })
+      .statictic-block-item__object-date-wrapper
+        .statictic-block-item__object-create
+          p.statictic-block-item__caption Создано:
+          p.statictic-block-item__date 18 мая 2024
+        .statictic-block-item__object-advertise
+          p.statictic-block-item__caption Рекламируется до:
+          p.statictic-block-item__date 18 мая 2024
+
+    .statictic-block-item__total-activities
+      .statictic-block-item__total-activities-item
+          p 12 752
+          p Просмотры
+      .statictic-block-item__separator
+      .statictic-block-item__total-activities-item
+          p 825
+          p В избранном
+      .statictic-block-item__separator
+      .statictic-block-item__total-activities-item
+          p 50
+          p Переходов на сайт
+      .statictic-block-item__separator
+      .statictic-block-item__total-activities-item
+          p 36
+          p Переходов по номеру
+
+    .statictic-block-item__details
+      .statictic-block-item__details-head
+        p.statictic-block-item__caption Упоминается в:
+        p.statictic-block-item__caption Категория:
+        p.statictic-block-item__caption Просмотры:
+        p.statictic-block-item__caption В избранном:
+        p.statictic-block-item__caption Переходов на сайт:
+        p.statictic-block-item__caption Переходов по номеру:
+      .statictic-block-item__details-item
+        a(href="#").statictic-block-item__object-name-link
+          span Что посмотреть в Твери зимой
+          +icon("link", 12, 12)
+        +label-item({
+          text: "Что посмотреть",
+          color: "blue"
+        })
+        .statictic-block-item__details-criterion
+          p.statictic-block-item__caption Просмотры:
+          p.statictic-block-item__value 52 632
+        .statictic-block-item__details-criterion
+          p.statictic-block-item__caption В избранном:
+          p.statictic-block-item__value 3 423
+        .statictic-block-item__details-criterion
+          p.statictic-block-item__caption Переходов на сайт:
+          p.statictic-block-item__value 23
+        .statictic-block-item__details-criterion
+          p.statictic-block-item__caption Переходов по номеру:
+          p.statictic-block-item__value 18
+      .statictic-block-item__details-item
+        a(href="#").statictic-block-item__object-name-link
+          span Куда сходить с девушкой в Твери
+          +icon("link", 12, 12)
+        +label-item({
+          text: "Чем заняться",
+          color: "red"
+        })
+        .statictic-block-item__details-criterion
+          p.statictic-block-item__caption Просмотры:
+          p.statictic-block-item__value 52 632
+        .statictic-block-item__details-criterion
+          p.statictic-block-item__caption В избранном:
+          p.statictic-block-item__value 3 423
+        .statictic-block-item__details-criterion
+          p.statictic-block-item__caption Переходов на сайт:
+          p.statictic-block-item__value 23
+        .statictic-block-item__details-criterion
+          p.statictic-block-item__caption Переходов по номеру:
+          p.statictic-block-item__value 18

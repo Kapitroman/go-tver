@@ -1,0 +1,23 @@
+mixin statictic-block-list
+  .statictic-block-list
+    .statictic-block-list__filter
+      p.statictic-block-list__filter-text Показывать статистику:
+      +custom-select({
+        optionsList: [
+          {
+            text: "За последний месяц",
+            value: "parameter-1", isActive: true
+          },
+          {
+            text: "За последний год",
+            value: "parameter-2"
+          },
+          {
+            text: "За последнюю неделю",
+            value: "parameter-3"
+          },
+        ]
+      })(data-select, data-name="object-select").custom-select
+    .statictic-block-list__wrapper
+      +statictic-block-item()
+      +statictic-block-item()

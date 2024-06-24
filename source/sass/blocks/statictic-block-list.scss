@@ -1,0 +1,46 @@
+.statictic-block-list {
+  width: 100%;
+
+  &__filter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    //gap: 16px;
+
+    margin-bottom: 16px;
+
+    @include vp-767 {
+      //gap: 8px;
+
+      margin-bottom: 10px;
+    }
+  }
+
+  &__filter-text {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+    color: #939599;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  .custom-select {
+    width: 221px;
+
+    @include vp-767 {
+      width: 205px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+}
