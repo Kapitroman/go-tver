@@ -1,5 +1,5 @@
 mixin setting()
-  .setting
+  .setting(data-form-validate)
     form(action="#", method="post", enctype="multipart/form-data")
       .setting__section-wrap
         .setting__section
@@ -26,14 +26,14 @@ mixin setting()
               inputType: "text",
               inputName: "name",
               inputValue: "Дмитрий"
-            })
+            })(data-required, data-validate-type="text")
             +custom-input({
               inputLabel: "E-mail",
               inputPlaceholder: "example@mail.ru",
               inputType: "email",
               inputName: "email",
               inputValue: "example@mail.ru"
-            })
+            })(data-required, data-validate-type="email")
         .setting__section
           .setting__decription
             h2.setting__title Пароль
@@ -45,7 +45,7 @@ mixin setting()
               inputType: "password",
               inputName: "old-password",
               inputValue: "qwerty1"
-            })
+            })(data-required)
             +custom-input({
               inputLabel: "Введите новый пароль:",
               inputPlaceholder: " ",
@@ -75,8 +75,6 @@ mixin setting()
               inputChecked: true,
               inputName: "sms-delivery",
             }).custom-toggle--checkbox
-
-
       +main-btn({
         type: "submit",
         icon: "arrow-black",
