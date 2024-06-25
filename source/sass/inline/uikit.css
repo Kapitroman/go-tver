@@ -80,7 +80,7 @@
 }
 .uikit__sections {
   position: fixed;
-  z-index: 5000;
+  z-index: 5;
   right: 0;
   top: 0;
   overflow-y: scroll;

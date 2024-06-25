@@ -19,34 +19,7 @@ block main
     +tags-additional()
     +see-also()
     +article()
-    //-.container
-      .www
-        +custom-select({
-          optionsList: [
-            {
-              text: "Рекомендованные",
-              value: "parameter-1", isActive: true
-            },
-            {
-              text: "Сначала дешевле",
-              value: "parameter-2"
-            },
-            {
-              text: "Сначала дороже",
-              value: "parameter-3"
-            },
-            {
-              text: "По рейтингу",
-              value: "parameter-4"
-            }, {
-              text: "По комментариям",
-              value: "parameter-5"
-            },
-            {
-              text: "По просмотрам",
-              value: "parameter-6"
-            }
-          ]
-        })(data-select, data-name="object-select").custom-select.object-select
 
 block modals
+  +modal("modal--tell-about")(data-modal="tell-about")
+    +modal-tell-about()

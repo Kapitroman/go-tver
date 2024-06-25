@@ -19,9 +19,9 @@ block main
           ul
             li
               a(href="#modals") Модальные окна
-            li
+            //-li
               a(href="#buttons") Кнопки
-            li
+            //-li
               a(href="#forms") Элементы форм
 
       //----------------------------------------------
@@ -44,13 +44,14 @@ block main
         section.uikit__section(id="modals")
           h2.uikit__h2 Модальные окна
           .uikit__component
-            p.uikit__text.uikit__text--class .modal \ .modal--feedback
-            +btn({text: "modal-feedback"})(data-open-modal="feedback")
+            p.uikit__text.uikit__text--class .modal \ .modal--tell-about
+            +main-btn({text: "modal-tell-about",  type: "button", icon: "arrow-black",})(data-open-modal="tell-about")
             pre
               |
               code(class="language-pug").
-                +btn({text: "modal-feedback"})(data-open-modal="feedback")
-          .uikit__component
+                +btn({text: "modal-tell-about"})(data-open-modal="tell-about")
+
+          //-.uikit__component
             p.uikit__text.uikit__text--class .modal \ .modal--success
             +btn({text: "modal-success"})(data-open-modal="success")
             pre
@@ -59,7 +60,7 @@ block main
                 +btn({text: "modal-success"})(data-open-modal="success")
 
         //- Кнопки
-        section.uikit__section(id="buttons")
+        //-section.uikit__section(id="buttons")
           h2.uikit__h2 Кнопки
           .uikit__component
             p.uikit__text.uikit__text--class .btn \ default \ button
@@ -84,7 +85,7 @@ block main
                 +btn({text: "Текст"})(disabled)
 
         //- Элементы форм
-        section.uikit__section(id="forms")
+        //-section.uikit__section(id="forms")
           h2.uikit__h2 Элементы форм
           .uikit__component
             p.uikit__text.uikit__text--class .custom-input \ type="text"
@@ -183,7 +184,9 @@ block main
     include ../../js/inline/ui-kit.js
 
 block modals
-  +modal("modal--feedback")(data-modal="feedback")
+  //-+modal("modal--feedback")(data-modal="feedback")
     +modal-feedback()
-  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="success")
+  //-+modal("modal--success modal--no-scale modal--fit-content")(data-modal="success")
     +modal-success()
+  +modal("modal--tell-about")(data-modal="tell-about")
+    +modal-tell-about()
