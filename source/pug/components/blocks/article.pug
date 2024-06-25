@@ -46,7 +46,7 @@ mixin article()
           +action-item({
             icon: "share",
             text: "Рассказать друзьям"
-          })
+          })(data-open-modal="tell-about")
         .article__section(id="part-1")
             h2 Совершить пешую прогулку по историческим улицам Твери
             p
@@ -105,7 +105,7 @@ mixin article()
           +action-item({
             icon: "share",
             text: "Рассказать друзьям"
-          })
+          })(data-open-modal="tell-about")
 
         +map()
         .article__info-panel

@@ -19,6 +19,8 @@ import {initYM} from './modules/init-map';
 import {toggleFavorite} from './modules/toggle-favorite';
 import {initArticlesSlider} from './modules/init-articles-slider';
 import {uploadAvatar} from './modules/upload-avatar';
+import {copyInBuffer} from './modules/copy-in-buffer';
+
 //import loadAndInitMap from "./modules/map.js";
 
 import * as flsFunctions from "./modules/functions.js";
@@ -65,7 +67,7 @@ window.addEventListener('DOMContentLoaded', () => {
     toggleFavorite();
     initArticlesSlider();
     uploadAvatar();
-
+    copyInBuffer();
   });
 });
 

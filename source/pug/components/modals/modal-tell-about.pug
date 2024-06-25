@@ -1,0 +1,24 @@
+mixin modal-tell-about()
+  .modal__head
+    h2.modal__title Рассказать друзьям про <span> «‎Что посмотреть в Твери зимой»‎</span>
+    p.modal__description Поделись этой записью с друзьями любым удобным для тебя способом:
+  .modal-group
+    .modal-group__link-about
+      +icon("href-about", 32, 32).modal-group__icon-title
+      p(data-target).modal-group__link-about-name.modal-group__link-about-name--copy https://go-tver.ru/category/todo/chto-posmotret-zimoj/#section-%D1%81%D0%BE%D0%B2%D0%B5%D1%80%D1%88%D0%B8%D1%82%D1%8C-%D0%BF%D0%B5%D1%88%D1%83%D1%8E-%D0%BF%D1%80%D0%BE%D0%B3%D1%83%D0%BB%D0%BA%D1%83-%D0%BF%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%BC-%D1%83%D0%BB%D0%B8%D1%86%D0%B0%D0%BC-%D1%82%D0%B2%D0%B5%D1%80%D0%B8
+      .modal-group__link-about-button-wrapper
+        button(type="button", data-copy).modal-group__link-about-button
+          +icon("copy-about", 32, 32).modal-group__icon-action
+        span.modal-group__link-about-tooltip Скопировано в буфер
+    a(href="#").modal-group__link-about
+      +icon("vk-about", 32, 32).modal-group__icon-title
+      p.modal-group__link-about-name ВКонтакте
+      +icon("arrow-about", 32, 32).modal-group__icon-action
+    a(href="#").modal-group__link-about
+      +icon("telegram-about", 32, 32).modal-group__icon-title
+      p.modal-group__link-about-name Телеграм
+      +icon("arrow-about", 32, 32).modal-group__icon-action
+    a(href="#").modal-group__link-about
+      +icon("odnoklasniki-about", 32, 32).modal-group__icon-title
+      p.modal-group__link-about-name Одноклассники
+      +icon("arrow-about", 32, 32).modal-group__icon-action

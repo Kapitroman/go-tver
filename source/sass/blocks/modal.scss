@@ -11,7 +11,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
+  background-color: rgba(128, 122, 117, 0.4);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -36,10 +36,10 @@
     align-items: center;
     width: 100%;
     min-height: 100%;
-    padding: 60px 40px;
+    //padding: 60px 40px;
 
     @include vp-767 {
-      padding: 60px 16px;
+      //padding: 60px 16px;
     }
   }
 
@@ -57,35 +57,90 @@
   &__content {
     position: relative;
 
-    width: 600px;
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 
-    background-color: $color-default-white;
+    width: 456px;
+    padding: 40px 48px;
+    border-radius: 48px;
+
+    background-color: $color-bg;
 
     @include vp-767 {
+      max-width: 360px;
       width: 100%;
       padding: 20px;
+      border-radius: 24px;
     }
   }
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 36px;
+    right: 36px;
     z-index: 1;
 
-    width: 40px;
-    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
     padding: 0;
-
-    background: $color-transparent;
+    border-radius: 50%;
     border: none;
-    cursor: pointer;
 
+    cursor: pointer;
+    background: $color-green;
     transition: opacity $trans-default;
 
     @include hover-focus {
-      opacity: 0.5;
+      opacity: 0.7;
+    }
+
+    @include vp-767 {
+      top: 20px;
+      right: 20px;
+
+      width: 36px;
+      height: 36px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+
+    font-family: $ff-pt;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 31px;
+    }
+
+    span {
+      color: $color-txt2;
+    }
+  }
+
+  &__description {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 21px;
     }
   }
 

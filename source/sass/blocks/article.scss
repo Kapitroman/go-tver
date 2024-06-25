@@ -10,6 +10,7 @@
     font-family: $ff-pt;
     font-size: 80px;
     line-height: 130%;
+    font-weight: 400;
 
     @include vp-767 {
       margin-bottom: 20px;
