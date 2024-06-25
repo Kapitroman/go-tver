@@ -1,0 +1,84 @@
+mixin setting()
+  .setting
+    form(action="#", method="post", enctype="multipart/form-data")
+      .setting__section-wrap
+        .setting__section
+          .setting__decription
+            h2.setting__title Аватар профиля
+            p.setting__text Современные технологии достигли такого уровня, что постоянный количественный рост и сфера нашей.
+          .setting__fields
+            +avatar()
+        .setting__section
+          .setting__decription
+            h2.setting__title Персональная информация
+            p.setting__text В частности, повышение уровня гражданского сознания выявляет срочную потребность соответствующих условий активизации.
+          .setting__fields
+            +custom-input({
+              inputLabel: "Номер телефона:",
+              inputPlaceholder: "+7 (985) 505-45-18",
+              inputType: "tel",
+              inputName: "phone",
+              inputValue: false
+            })
+            +custom-input({
+              inputLabel: "Имя",
+              inputPlaceholder: "Дмитрий",
+              inputType: "text",
+              inputName: "name",
+              inputValue: "Дмитрий"
+            })
+            +custom-input({
+              inputLabel: "E-mail",
+              inputPlaceholder: "example@mail.ru",
+              inputType: "email",
+              inputName: "email",
+              inputValue: "example@mail.ru"
+            })
+        .setting__section
+          .setting__decription
+            h2.setting__title Пароль
+            p.setting__text Учитывая ключевые сценарии поведения, перспективное планирование играет определяющее значение для позиций.
+          .setting__fields
+            +custom-input({
+              inputLabel: "Введите старый пароль:",
+              inputPlaceholder: " ",
+              inputType: "password",
+              inputName: "old-password",
+              inputValue: "qwerty1"
+            })
+            +custom-input({
+              inputLabel: "Введите новый пароль:",
+              inputPlaceholder: " ",
+              inputType: "password",
+              inputName: "new-password",
+              inputValue: ""
+            })
+            +custom-input({
+              inputLabel: "Введите новый пароль еще раз",
+              inputPlaceholder: " ",
+              inputType: "password",
+              inputName: "repeat-password",
+              inputValue: ""
+            })
+        .setting__section
+          .setting__decription
+            h2.setting__title Уведомления
+            p.setting__text Современные технологии достигли такого уровня, что постоянный количественный рост и сфера нашей.
+          .setting__fields
+            +custom-toggle({
+              inputLabel: "Разрешить Email-рассылка новостей — это регулярные письма с последними новостями компании, её продуктами и услугами, а также другой полезной информацией.",
+              inputChecked: true,
+              inputName: "email-delivery",
+            }).custom-toggle--checkbox
+            +custom-toggle({
+              inputLabel: "Разрешить SMS-рассылка новостей — это регулярные письма с последними новостями компании, её продуктами и услугами, а также другой полезной информацией.",
+              inputChecked: true,
+              inputName: "sms-delivery",
+            }).custom-toggle--checkbox
+
+
+      +main-btn({
+        type: "submit",
+        icon: "arrow-black",
+        text: "Сохранить изменения"
+      })

@@ -1,4 +1,14 @@
 mixin main-btn(options = {})
-  a(href="#").main-btn&attributes(attributes)
+  //-a(href="#").main-btn&attributes(attributes)
+    span=options.text
+    +icon(options.icon, 40, 40)
+  - const tag = options.href ? "a" : "button";
+  - const href = options.href || false;
+  - const text = options.text || "";
+  - const type = options.type || tag === "button" ? options.type || "button" : false;
+  - const target = options.isExternal ? "_blank" : false;
+  - const rel = options.isExternal ? "nofollow noopener noreferrer" : false;
+
+  #{tag}.main-btn(href=href, target=target, rel=rel, type=type)&attributes(attributes)
     span=options.text
     +icon(options.icon, 40, 40)

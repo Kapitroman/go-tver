@@ -2,7 +2,7 @@ import {mobileVhFix} from './utils/mobile-vh-fix.js';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
-import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
+// import {uploadImage, uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 
 import {initUserNavigationSlider} from './modules/init-user-navigation-slider';
 import {Burger} from './modules/burger';
@@ -18,7 +18,7 @@ import {initCardGridToSlider} from './modules/init-card-grid-to-slider';
 import {initYM} from './modules/init-map';
 import {toggleFavorite} from './modules/toggle-favorite';
 import {initArticlesSlider} from './modules/init-articles-slider';
-
+import {uploadAvatar} from './modules/upload-avatar';
 //import loadAndInitMap from "./modules/map.js";
 
 import * as flsFunctions from "./modules/functions.js";
@@ -40,8 +40,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    uploadFile();
-    uploadImageDrop();
+    // uploadImage()
+    // uploadFile();
+    // uploadImageDrop();
     const select = new CustomSelect();
     select.init();
     const form = new Form();
@@ -63,6 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initYM();
     toggleFavorite();
     initArticlesSlider();
+    uploadAvatar();
 
   });
 });

@@ -1,7 +1,30 @@
 import {Upload} from './upload.js';
 
+const uploadImageBlock = document.querySelector('[data-upload="img"]');
 const uploadFileBlock = document.querySelector('[data-upload="file"]');
 const uploadImageDropBlock = document.querySelector('[data-upload="img-drop"]');
+
+export const uploadImage = () => new Upload(uploadImageBlock, {
+  uploadLength: 1,
+  dropZone: true,
+  preview: true,
+  previewImg: true,
+  maxFileSize: 1048576,
+  accept: ['.png', '.jpg', '.jpeg', '.webp'],
+  iconFormat: {
+    png: './img/file/icon-file-png.png',
+    jpg: './img/file/icon-file-jpg.png',
+    jpeg: './img/file/icon-file-jpg.png',
+    webp: './img/file/icon-file-webp.png',
+    default: './img/file/icon-file-docs.png',
+  },
+  fileInfo: {
+    fileName: true,
+    fileSize: true,
+  },
+  emptyMessage: 'Добавление файла обязательно',
+  errorMessage: 'Выделенные файлы превышают максимальный размер',
+});
 
 export const uploadFile = () => new Upload(uploadFileBlock, {
   uploadLength: 5,

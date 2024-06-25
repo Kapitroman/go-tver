@@ -1,0 +1,84 @@
+.setting {
+  width: 100%;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  &__section-wrap {
+    margin-bottom: 20px;
+
+    @include vp-1023 {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__section {
+    display: flex;
+    gap: 8.55%;
+
+    padding: 35px 0 36px 0;
+    border-top: 1px solid $color-sep;
+
+    @include vp-1023 {
+      flex-direction: column;
+      gap: initial;
+
+      padding: 23px 0 24px 0;
+    }
+  }
+
+  &__decription {
+    width: calc((100% - 8.55%) / 2);
+
+    @include vp-1023 {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+
+    font-family: $ff-pt;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+
+    @include vp-1023 {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: calc((100% - 8.55%) / 2);
+
+    @include vp-1023 {
+      width: 100%;
+    }
+  }
+
+  .main-btn {
+    margin: 0 auto;
+  }
+}

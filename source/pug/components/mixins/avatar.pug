@@ -1,0 +1,12 @@
+mixin avatar
+  .avatar
+    label(for="files-image" tabindex="0")
+      img(src="./img/content/avatars/avatar-01@2x.png" width="96" height="96" alt="картинка аватара")
+    input(class="visually-hidden" type="file" id="files-image" name="files-image" accept=".jpg, .jpeg, .png, .webp" tabindex="-1")
+    .avatar__buttons
+      .avatar__button(type=button, data-avatar-edit)
+        +icon("edit", 24, 24)
+        span Изменить
+      .avatar__button(type=button, data-avatar-delete)
+        +icon("delete", 24, 24)
+        span Удалить

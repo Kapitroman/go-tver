@@ -1,0 +1,72 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 8.41%;
+
+  width: 100%;
+
+  @include vp-767 {
+    gap: 36px;
+  }
+
+  label {
+    width: 96px;
+    height: 96px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+
+      object-fit: cover;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12.16%;
+
+    width: calc(100% - 8.41% - 96px);
+
+    @include vp-767 {
+      gap: 16px;
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 0;
+    border: none;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $color-txt2;
+
+    background-color: $color-transparent;
+    cursor: pointer;
+    transition: color $trans-default;
+
+    @include hover-focus {
+      color: $color-black;
+
+      svg {
+        color: $color-black;
+      }
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      color: $color-txt2;
+
+      transition: color $trans-default;
+    }
+  }
+}
