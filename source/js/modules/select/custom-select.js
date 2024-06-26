@@ -284,7 +284,7 @@ export class CustomSelect {
 
     const selectList = this._selectElement.querySelector('.custom-select__list');
     const selectOpenHight = button.offsetHeight + selectList.offsetHeight;
-    console.log(selectOpenHight);
+
     this._selectElement.style.setProperty('--select-height', `${selectOpenHight}px`);
 
     button.addEventListener('click', this._onSelectClick);

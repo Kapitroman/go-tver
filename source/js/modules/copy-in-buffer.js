@@ -1,9 +1,10 @@
 const copyButtons = Array.from(document.querySelectorAll('[data-copy]'));
 
 const copyInBuffer = () => {
-  if (copyButtons.lenght === 0) {
+  if (copyButtons.length === 0) {
     return;
   }
+
   const dataWrapper = document.querySelector('.modal-group__link-about-button-wrapper');
   const data = document.querySelector('[data-target]').innerHTML;
 

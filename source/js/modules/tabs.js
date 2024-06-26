@@ -53,7 +53,6 @@ export class Tabs {
   }
 
   _setTabStartState(tab, dataHeight, tabElements, tabContentElement, tabControlElements, dataDelay) {
-    console.log(tab);
     const activeIndex = this._returnActiveIndex(tabControlElements);
     const blockHeight = dataHeight === 'max' ? this._returnMaxHeight(tabElements) : tabElements[activeIndex].offsetHeight;
     this._removeAllActiveClasses(tabControlElements, tabElements);

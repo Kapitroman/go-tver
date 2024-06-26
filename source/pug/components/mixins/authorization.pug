@@ -2,7 +2,7 @@ mixin authorization(options = {})
   - const picture = options.picture ? options.picture : "login-photo";
   - const name = options.name ? options.name : "Дмитрий";
   if (authorization === false)
-    a(href="#").menu-user-group-item
+    a(href="#" data-open-modal="login-to-account").menu-user-group-item
       +icon("user", 24, 24).menu-user-group-item__icon
       span.menu-user-group-item__text Вход / Регистрация
   else

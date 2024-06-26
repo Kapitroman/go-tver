@@ -14,7 +14,6 @@ const uploadAvatar = () => {
 
   const uploadImage = (evt) => {
     const file = evt.target.files[0];
-    console.log(file);
 
     if (file.size < MAX_SIZE_IN_BYTES) {
       image.src = URL.createObjectURL(file)

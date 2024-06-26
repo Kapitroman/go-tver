@@ -1,0 +1,24 @@
+mixin modal-login-to-account()
+  .modal__head
+    h2.modal__title Войти в аккаунт
+    p.modal__description Зарегистрируйтесь, чтобы получить доступ к расширенному функционалу
+  .modal__form(data-form-validate, data-callback="base")
+    form(action="#", method="post")
+      +custom-input({
+        inputLabel: "Введите номер телефона:",
+        inputPlaceholder: "+7 (___) ___-__-__",
+        inputType: "tel",
+        inputName: "phone-login",
+      })(data-required, data-validate-type="phone")
+      +custom-input({
+        inputLabel: "Введите пароль:",
+        inputPlaceholder: " ",
+        inputType: "password",
+        inputName: "password-login",
+      })(data-required)
+      +main-btn({
+        type: "submit",
+        icon: "arrow-black",
+        text: "Войти"
+      })
+      p.modal__text Еще нет аккаунта? <a class="modal__link" href="#">Зарегистрироваться</a>

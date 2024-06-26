@@ -1,5 +1,5 @@
 mixin setting()
-  .setting(data-form-validate)
+  .setting(data-form-validate, data-callback="base")
     form(action="#", method="post", enctype="multipart/form-data")
       .setting__section-wrap
         .setting__section
@@ -19,7 +19,7 @@ mixin setting()
               inputType: "tel",
               inputName: "phone",
               inputValue: false
-            })
+            })(data-validate-type="phone")
             +custom-input({
               inputLabel: "Имя",
               inputPlaceholder: "Дмитрий",

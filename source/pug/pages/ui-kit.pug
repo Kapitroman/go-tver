@@ -50,6 +50,13 @@ block main
               |
               code(class="language-pug").
                 +btn({text: "modal-tell-about"})(data-open-modal="tell-about")
+          .uikit__component
+            p.uikit__text.uikit__text--class .modal \ .modal--login-to-account
+            +main-btn({text: "modal-login-to-account",  type: "button", icon: "arrow-black",})(data-open-modal="login-to-account")
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "modal-login-to-account"})(data-open-modal="login-to-account")
 
           //-.uikit__component
             p.uikit__text.uikit__text--class .modal \ .modal--success
@@ -190,3 +197,5 @@ block modals
     +modal-success()
   +modal("modal--tell-about")(data-modal="tell-about")
     +modal-tell-about()
+  +modal("modal--login-to-account")(data-modal="login-to-account")
+    +modal-login-to-account()
