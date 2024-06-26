@@ -1,0 +1,10 @@
+mixin modal-user-success()
+  img(src="./img/svg/user-success.svg" width="360", height="196", alt="успех", loading="lazy")
+  .modal__head
+    h2.modal__title Пользователь успешно зарегистрирован!
+  +main-btn({
+    href: "#",
+    text: "Перейти в мой аккаунт",
+    icon: "arrow-black",
+  })
+

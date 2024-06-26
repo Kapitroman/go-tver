@@ -212,4 +212,33 @@
 
     pointer-events: auto;
   }
+
+  &--sms-code {
+    .modal__content {
+      gap: 30px;
+    }
+  }
+
+  &--user-success {
+    .modal__content {
+      gap: 30px;
+    }
+
+    .modal__title {
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    img {
+      width: 360px;
+      height: 196px;
+
+      object-fit: cover;
+
+      @include vp-767 {
+        width: 320px;
+        height: 174px;
+      }
+    }
+  }
 }
