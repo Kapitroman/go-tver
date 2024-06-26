@@ -57,7 +57,13 @@ block main
               |
               code(class="language-pug").
                 +btn({text: "modal-login-to-account"})(data-open-modal="login-to-account")
-
+          .uikit__component
+            p.uikit__text.uikit__text--class .modal \ .modal--user-registration
+            +main-btn({text: "modal-user-registration",  type: "button", icon: "arrow-black",})(data-open-modal="user-registration")
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "modal-user-registration"})(data-open-modal="user-registration")
           //-.uikit__component
             p.uikit__text.uikit__text--class .modal \ .modal--success
             +btn({text: "modal-success"})(data-open-modal="success")
@@ -199,3 +205,5 @@ block modals
     +modal-tell-about()
   +modal("modal--login-to-account")(data-modal="login-to-account")
     +modal-login-to-account()
+  +modal("modal--user-registration")(data-modal="user-registration")
+    +modal-user-registration()
