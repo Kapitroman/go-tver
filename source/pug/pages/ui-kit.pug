@@ -64,6 +64,13 @@ block main
               |
               code(class="language-pug").
                 +btn({text: "modal-user-registration"})(data-open-modal="user-registration")
+          .uikit__component
+            p.uikit__text.uikit__text--class .modal \ .modal--
+            +main-btn({text: "modal-sms-code",  type: "button", icon: "arrow-black",})(data-open-modal="sms-code")
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "modal-sms-code"})(data-open-modal="sms-code")
           //-.uikit__component
             p.uikit__text.uikit__text--class .modal \ .modal--success
             +btn({text: "modal-success"})(data-open-modal="success")
@@ -207,3 +214,5 @@ block modals
     +modal-login-to-account()
   +modal("modal--user-registration")(data-modal="user-registration")
     +modal-user-registration()
+  +modal("modal--sms-code")(data-modal="sms-code")
+    +modal-sms-code()

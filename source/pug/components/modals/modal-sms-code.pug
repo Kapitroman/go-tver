@@ -1,0 +1,31 @@
+mixin modal-sms-code()
+  .modal__head
+    h2.modal__title Введите код из SMS
+    p.modal__description Зарегистрируйтесь, чтобы получить доступ к расширенному функционалу
+  .modal__form(data-form-validate, data-callback="base")
+    form(action="#", method="post")
+      .modal__group-numeric
+        +custom-input({
+          inputType: "text",
+          inputPlaceholder: "_",
+          inputName: "code-sms-1",
+          inputMode: "numeric"
+        })(data-required, data-validate-type="matrix", data-matrix-limitation="digit", data-matrix="_").custom-input--numeric
+        +custom-input({
+          inputType: "text",
+          inputPlaceholder: "_",
+          inputName: "code-sms-2",
+          inputMode: "numeric"
+        })(data-required, data-validate-type="matrix", data-matrix-limitation="digit", data-matrix="_").custom-input--numeric
+        +custom-input({
+          inputType: "text",
+          inputPlaceholder: "_",
+          inputName: "code-sms-3",
+          inputMode: "numeric"
+        })(data-required, data-validate-type="matrix", data-matrix-limitation="digit", data-matrix="_").custom-input--numeric
+        +custom-input({
+          inputType: "text",
+          inputPlaceholder: "_",
+          inputName: "code-sms-4",
+          inputMode: "numeric"
+        })(data-required, data-validate-type="matrix", data-matrix-limitation="digit", data-matrix="_").custom-input--numeric

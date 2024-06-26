@@ -114,3 +114,25 @@
     }
   }
 }
+
+.custom-input--numeric {
+  label input {
+    width: 84px;
+    min-height: 108px;
+    padding: 14px 25px;
+
+    font-family: $ff-pt;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 78px;
+
+    @include vp-767 {
+      width: 74px;
+      min-height: 96px;
+      padding: 24px 26px;
+
+      font-size: 36px;
+      line-height: 47px;
+    }
+  }
+}

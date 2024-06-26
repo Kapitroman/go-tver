@@ -144,7 +144,7 @@
     }
   }
 
-  .modal__form form {
+  &__form form {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -152,7 +152,7 @@
     width: 100%;
   }
 
-  .modal__text {
+  &__text {
     margin: 0 auto;
 
     font-size: 14px;
@@ -165,7 +165,7 @@
     }
   }
 
-  .modal__link {
+  &__link {
     color: #5C73E5;
 
     transition: opacity $trans-default;
@@ -173,6 +173,12 @@
     @include hover-focus {
       opacity: 0.7;
     }
+  }
+
+  &__group-numeric {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   &--responsive {
