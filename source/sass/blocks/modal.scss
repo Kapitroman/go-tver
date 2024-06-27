@@ -222,11 +222,12 @@
   &--user-success {
     .modal__content {
       gap: 30px;
+      text-align: center;
     }
 
     .modal__title {
       margin-bottom: 0;
-      text-align: center;
+      //text-align: center;
     }
 
     img {
