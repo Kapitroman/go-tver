@@ -1,0 +1,40 @@
+mixin card-object
+  article.card-object.item-favorite
+    .container
+      h1.card-object__title Viewpoint Hotel
+      .card-object__grid
+        .card-object__images-wrapper
+          .card-object__images
+            .card-object__image.is-show
+              +picture("content/cards", "card-01", "png", 456, 278, alt="виды отеля", false)
+            .card-object__image
+              +picture("content/cards", "card-02", "png", 456, 278, alt="виды отеля", false)
+            .card-object__image
+              +picture("content/cards", "card-03", "png", 456, 278, alt="виды отеля", false)
+          .card-object__images-preview
+            button(type="button" data-preview).card-object__image-button.is-show
+              +picture("content/cards", "card-01", "png", 456, 278, alt="виды отеля", false)
+            button(type="button" data-preview).card-object__image-button
+              +picture("content/cards", "card-02", "png", 456, 278, alt="виды отеля", false)
+            button(type="button" data-preview).card-object__image-button
+              +picture("content/cards", "card-03", "png", 456, 278, alt="виды отеля", false)
+            button(type="button" data-open-modal="card-slider").card-object__image-button.card-object__image-button--count
+              +picture("content/cards", "card-01", "png", 456, 278, alt="виды отеля", false)
+              span +8
+        .card-object__features
+        .card-object__description
+          h2.card-object__title-h2 Описание
+          p.card-object__description-text
+            | Расположение отеля в самом центре столицы, на одной из набережных Москвы-реки,
+            | подойдет как туристам, так и деловым людям. До Красной площади, парка «Зарядье»,
+            | Государственной Третьяковской галереи и других популярных мест города — 5 минут ходьбы.
+            | В обстановке отеля сочетаются современные технологии и домашний уют, а из панорамных
+            | окон открываются замечательные виды на главную реку Москвы. К услугам гостей
+            | круглосуточная стойка регистрации, охраняемая парковка и прокат автомобиля с водителем.
+          .card-object__description-contacts
+
+        .card-object__comments
+          h2.card-object__title-h2 Комментарии
+          .card-object__comments-action-panel
+          .card-object__comments-wrapper
+      +map()

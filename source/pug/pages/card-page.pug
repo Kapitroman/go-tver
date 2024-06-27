@@ -1,0 +1,36 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Go-Tver.ru. Отель Viewpoint Hotel" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const authorization = false
+  - const map = true
+
+block main
+  main
+    .container
+      +bread-crumbs(["Главная", "Тверь", "Где остановиться", "Отель Viewpoint Hotel"])
+    +card-object()
+    +places-nearby()
+    +tags-additional()
+
+
+block modals
+  +modal("modal--tell-about")(data-modal="tell-about")
+    +modal-tell-about()
+  +modal("modal--login-to-account")(data-modal="login-to-account")
+    +modal-login-to-account()
+  +modal("modal--user-registration")(data-modal="user-registration")
+    +modal-user-registration()
+  +modal("modal--sms-code")(data-modal="sms-code")
+    +modal-sms-code()
+  +modal("modal--user-success")(data-modal="user-success")
+    +modal-user-success()
+  +modal("modal--main-slider")(data-modal="main-slider")
+    +modal-main-slider()
+  +modal("modal--card-slider")(data-modal="card-slider")
+    +modal-card-slider()

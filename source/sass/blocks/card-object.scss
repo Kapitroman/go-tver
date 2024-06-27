@@ -1,0 +1,161 @@
+.card-object {
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+
+    font-family: $ff-pt;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 104px;
+  }
+
+  &__grid {
+    position: relative;
+
+    & > * {
+      //width: calc((100% - 24px) * 936 / (936 + 456));
+      width: calc(100% - 24px - 456px);
+
+      @include vp-1023 {
+        //width: calc((100% - 24px) * 0.6);
+      }
+
+      @include vp-767 {
+        width: 100%;
+      }
+    }
+  }
+
+  &__images-wrapper {
+    display: flex;
+    gap: 10px;
+
+    height: 462px;
+  }
+
+  &__images {
+    position: relative;
+
+    width: calc(100% - 10px - 108px);
+    height: 100%;
+  }
+
+  &__image {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity $trans-default, visibility $trans-default;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 24px;
+      object-fit: cover;
+    }
+  }
+
+  &__image.is-show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__images-preview {
+    width: 108px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  &__image-button {
+    width: 108px;
+    height: 108px;
+
+    padding: 0;
+    border: none;
+
+    cursor: pointer;
+
+    transition: opacity $trans-default;
+    background-color: $color-transparent;
+
+    @include hover-focus {
+      opacity: 0.7;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 24px;
+
+      object-fit: cover;
+    }
+  }
+
+  &__image-button.is-show {
+    pointer-events: none;
+  }
+
+  &__image-button--count {
+    position: relative;
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+      border-radius: 24px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: #27292E80;
+
+      color: $color-white;
+      font-family: $ff-pt;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 36px;
+    }
+
+
+  }
+
+  &__features {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    //width: calc((100% - 24px) * 456 / (936 + 456));
+    width: 456px;
+    padding: 32px 36px;
+    border-radius: 24px;
+    min-height: 462px;
+
+    background-color: #F2F1F0;
+
+    @media (min-width: 768px) {
+      margin: 0;
+    }
+
+    @include vp-1023 {
+      //width: calc((100% - 24px) * 0.4);
+      padding: 20px 24px;
+    }
+
+    @include vp-767 {
+      position: static;
+      width: 100%;
+    }
+  }
+}
