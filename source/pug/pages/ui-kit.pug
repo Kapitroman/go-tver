@@ -44,6 +44,13 @@ block main
         section.uikit__section(id="modals")
           h2.uikit__h2 Модальные окна
           .uikit__component
+            p.uikit__text.uikit__text--class .modal \ .modal--main-slider
+            +main-btn({text: "modal-main-slider",  type: "button", icon: "arrow-black",})(data-open-modal="main-slider")
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "modal-main-slider"})(data-open-modal="main-slider")
+          .uikit__component
             p.uikit__text.uikit__text--class .modal \ .modal--tell-about
             +main-btn({text: "modal-tell-about",  type: "button", icon: "arrow-black",})(data-open-modal="tell-about")
             pre
@@ -225,3 +232,5 @@ block modals
     +modal-sms-code()
   +modal("modal--user-success")(data-modal="user-success")
     +modal-user-success()
+  +modal("modal--main-slider")(data-modal="main-slider")
+    +modal-main-slider()
