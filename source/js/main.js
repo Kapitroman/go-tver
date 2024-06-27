@@ -21,6 +21,7 @@ import {initArticlesSlider} from './modules/init-articles-slider';
 import {uploadAvatar} from './modules/upload-avatar';
 import {copyInBuffer} from './modules/copy-in-buffer';
 import {initMainSlider} from './modules/init-main-slider';
+import {initModalCardSlider} from './modules/init-modal-card-slider';
 
 //import loadAndInitMap from "./modules/map.js";
 
@@ -70,6 +71,7 @@ window.addEventListener('DOMContentLoaded', () => {
     uploadAvatar();
     copyInBuffer();
     initMainSlider();
+    initModalCardSlider();
   });
 });
 
