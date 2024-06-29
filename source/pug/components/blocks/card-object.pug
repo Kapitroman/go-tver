@@ -92,9 +92,104 @@ mixin card-object
             })
           div(data-showmore="items").card-object__comments-wrapper
             div(data-showmore-content="3").card-object__comments-inner
-              +comment-item()
-              +comment-item()
-              +comment-item()
+              .comment-item
+                .comment-item__main-wrapper
+                  .comment-item__header
+                    .comment-item__avatar
+                      +picture("content/avatars", "avatar-01", "png", 48, 48, "аватар", true)
+                    p.comment-item__name Дмитрий
+                    time(datetime="2001-05-8").comment-item__date 8 мая 2024
+                  p.comment-item__main
+                    | В частности, повышение уровня гражданского сознания выявляет срочную потребность
+                    | соответствующих условий активизации. Современные технологии достигли такого уровня,
+                    | что постоянный количественный рост и сфера нашей активности позволяет выполнить важные
+                    | задания по разработке стандартных подходов. Учитывая ключевые сценарии поведения,
+                    | перспективное планирование играет определяющее значение для позиций, занимаемых
+                    | участниками в отношении поставленных задач.
+                  .comment-item__footer
+                    button(type="button").comment-item__reply-button
+                      +icon("arrow-turn-down", 20, 20)
+                      span.comment-item__reply-button-text Ответить
+                      span.comment-item__reply-button-count (2)
+                    .comment-item__activity
+                      button(type="button", data-activity-plus).comment-item__activity-button.no-zero
+                        +icon("like-finger", 20, 20)
+                        span 24
+                      button(type="button", data-activity-minus).comment-item__activity-button.no-zero
+                        +icon("like-finger", 20, 20)
+                        span 3
+                .comment-item__replies-wrapper
+                  .comment-item__reply.comment-item__reply--manager
+                    .comment-item__header
+                      p.comment-item__name Менеджер GoTver.Ru
+                      time(datetime="2001-05-12").comment-item__date 12 мая 2024
+                    p.comment-item__main
+                     | Мы вынуждены отталкиваться от того, что глубокий уровень погружения позволяет выполнить
+                     | важные задания по разработке системы массового участия. В рамках спецификации современных
+                     | стандартов, сторонники тоталитаризма в науке описаны максимально подробно.
+                  .comment-item__reply
+                    .comment-item__header
+                      p.comment-item__name Дмитрий
+                      time(datetime="2001-05-18").comment-item__date 18 мая 2024
+                    p.comment-item__main
+                      | А также активно развивающиеся страны третьего мира могут быть ассоциативно распределены
+                      | по отраслям. Значимость этих проблем настолько очевидна, что выбранный нами инновационный
+                      | путь предполагает независимые способы реализации первоочередных требований.
+                      | Каждый из нас понимает очевидную вещь: внедрение современных методик представляет
+                      | собой интересный эксперимент проверки распределения внутренних резервов и ресурсов!
+              .comment-item
+                .comment-item__main-wrapper
+                  .comment-item__header
+                    .comment-item__avatar
+                      +picture("content/avatars", "avatar-02", "png", 48, 48, "аватар", true)
+                    p.comment-item__name Ольга
+                    time(datetime="2001-05-8").comment-item__date 8 мая 2024
+                  p.comment-item__main
+                    | Картельные сговоры не допускают ситуации, при которой сторонники тоталитаризма в
+                    | науке могут быть функционально разнесены на независимые элементы. С учётом
+                    | сложившейся международной обстановки, современная методология разработки представляет
+                    | собой интересный эксперимент проверки экономической целесообразности принимаемых
+                    | решений. А также базовые сценарии поведения пользователей освещают чрезвычайно
+                    | интересные особенности картины в целом, однако конкретные выводы, разумеется,
+                    | функционально разнесены на независимые элементы.
+                  .comment-item__footer
+                    button(type="button").comment-item__reply-button
+                      +icon("arrow-turn-down", 20, 20)
+                      span.comment-item__reply-button-text Ответить
+                      span.comment-item__reply-button-count (0)
+                    .comment-item__activity
+                      button(type="button", data-activity-plus).comment-item__activity-button
+                        +icon("like-finger", 20, 20)
+                        span 0
+                      button(type="button", data-activity-minus).comment-item__activity-button.no-zero
+                        +icon("like-finger", 20, 20)
+                        span 3
+              .comment-item
+                .comment-item__main-wrapper
+                  .comment-item__header
+                    .comment-item__avatar
+                      +picture("content/avatars", "avatar-03", "png", 48, 48, "аватар", true)
+                    p.comment-item__name Виталий
+                    time(datetime="2001-05-8").comment-item__date 8 мая 2024
+                  p.comment-item__main
+                    | В годовщину освобождения города - 16 декабря на территории Обелиска Победы устраивают
+                    |  праздничный салют, который виден даже из отдалённых районов города.Зимняя Тверь
+                    | так же уютна, как и в другое время года. Здесь особая атмосфера и
+                    | достопримечательности на любой вкус. Совершите путешествие в Тверь,
+                    | насладитесь этим городом, получайте незабываемые впечатления и, конечно,
+                    | делайте свои лучшие фото.
+                  .comment-item__footer
+                    button(type="button").comment-item__reply-button
+                      +icon("arrow-turn-down", 20, 20)
+                      span.comment-item__reply-button-text Ответить
+                      span.comment-item__reply-button-count (0)
+                    .comment-item__activity
+                      button(type="button", data-activity-plus).comment-item__activity-button.no-zero
+                        +icon("like-finger", 20, 20)
+                        span 4
+                      button(type="button", data-activity-minus).comment-item__activity-button
+                        +icon("like-finger", 20, 20)
+                        span 0
               +comment-item()
               +comment-item()
             +button-more()
