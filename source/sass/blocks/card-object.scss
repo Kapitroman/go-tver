@@ -410,9 +410,17 @@
     }
   }
 
-
-
   .custom-select {
     width: 210px;
+  }
+
+  &__comments__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    P {
+      margin: 0;
+    }
   }
 }
