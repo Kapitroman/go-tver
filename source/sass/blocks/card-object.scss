@@ -414,13 +414,12 @@
     width: 210px;
   }
 
-  &__comments__inner {
+  &__comments-inner {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
 
-    P {
-      margin: 0;
-    }
+    margin-bottom: 24px;
+
   }
 }

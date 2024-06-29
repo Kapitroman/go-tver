@@ -91,7 +91,11 @@ mixin card-object
               icon: "arrow-black",
             })
           div(data-showmore="items").card-object__comments-wrapper
-            div(data-showmore-content="3").card-object__comments__inner
+            div(data-showmore-content="3").card-object__comments-inner
+              +comment-item()
+              +comment-item()
+              +comment-item()
+              +comment-item()
               +comment-item()
             +button-more()
       +map()
