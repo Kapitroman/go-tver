@@ -21,7 +21,7 @@ mixin card-object
             button(type="button" data-open-modal="card-slider").card-object__image-button.card-object__image-button--count
               +picture("content/cards", "card-01", "png", 456, 278, alt="виды отеля", false)
               span +8
-        .card-object__features
+        +card-object-features()
         .card-object__description
           h2.card-object__title-h2 Описание
           p.card-object__description-text
@@ -32,9 +32,70 @@ mixin card-object
             | окон открываются замечательные виды на главную реку Москвы. К услугам гостей
             | круглосуточная стойка регистрации, охраняемая парковка и прокат автомобиля с водителем.
           .card-object__description-contacts
+            h3.card-object__description-contacts-title Контакты <span>Viewpoint Hotel</span>
+            .card-object__description-contacts-content
+              p.card-object__description-contacts-text
+               | Совершите путешествие в Тверь, насладитесь этим городом, получайте незабываемые впечатления
+               | и, конечно, делайте свои лучшие фото.
+              .card-object__description-contacts-info-group
+                a(href="tel:+79651803133").card-object__description-contacts-link.card-object__description-contacts-link--bold
+                  +icon("phone", 24, 24)
+                  span +7 (965) 180-31-33
+                a(href="mailto:example@mail.ru").card-object__description-contacts-link
+                  +icon("mail", 24, 24)
+                  span example@mail.ru
+                a(href="#").card-object__description-contacts-link
+                  +icon("web", 24, 24)
+                  span website.ru
+                .card-object__description-contacts-social
+                  a(href="#")
+                    +icon("dzen", 24, 24)
+                    span.visually-hidden Дзен
+                  a(href="#")
+                    +icon("vk", 24, 24)
+                    span.visually-hidden VK
+                  a(href="#")
+                    +icon("telegram", 24, 24)
+                    span.visually-hidden Telegram
+                  a(href="#")
+                    +icon("odnoklasniki", 24, 24)
+                    span.visually-hidden Одноклассники
 
         .card-object__comments
           h2.card-object__title-h2 Комментарии
           .card-object__comments-action-panel
-          .card-object__comments-wrapper
+            .card-object__comments-select-group
+              p Сортировать по:
+              +custom-select({
+                optionsList: [
+                  {
+                    text: "Рекомендованные",
+                    value: "parameter-1", isActive: true
+                  },
+                  {
+                    text: "Сначала дешевле",
+                    value: "parameter-2"
+                  },
+                  {
+                    text: "Сначала дороже",
+                    value: "parameter-3"
+                  },
+                  {
+                    text: "По рейтингу",
+                    value: "parameter-4"
+                  },
+                ]
+              })(data-select, data-name="object-select").custom-select
+            +main-btn({
+              text: "Добавить комментарий",
+              icon: "arrow-black",
+            })
+          div(data-showmore="items").card-object__comments-wrapper
+            div(data-showmore-content="3").card-object__comments__inner
+              p hfshgkfj
+              p jijfibjdgifbjdif
+              p jfjhjjhgjfdjg
+              p jdjdjsdfjsfdj
+              p dfjljlfjslkj
+            +button-more()
       +map()
