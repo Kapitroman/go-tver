@@ -98,11 +98,47 @@
     }
   }
 
+  &--red.is-active {
+    background-color: $color-red;
+
+    .navigator-location-item__icon {
+      background-color: $color-red;
+    }
+  }
+
+  &--green.is-active {
+    background-color: $color-green;
+
+    .navigator-location-item__icon {
+      background-color: $color-green;
+    }
+  }
+
+  &--blue.is-active {
+    background-color: $color-blue;
+
+    .navigator-location-item__icon {
+      background-color: $color-blue;
+    }
+  }
+
+  &--purple.is-active {
+    background-color: $color-purple;
+
+    .navigator-location-item__icon {
+      background-color: $color-purple;
+    }
+  }
+
   &.swiper-slide {
     width: 336px;
 
     @include vp-767 {
       width: 300px;
     }
+  }
+
+  &.is-active {
+    pointer-events: none;
   }
 }

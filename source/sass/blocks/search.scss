@@ -42,6 +42,10 @@
     line-height: 150%;
     color: $color-black;
 
+    &::placeholder {
+      color: $color-black;
+    }
+
     @include vp-767 {
       font-size: 14px;
     }
