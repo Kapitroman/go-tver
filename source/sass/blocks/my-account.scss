@@ -116,6 +116,8 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
+    color: $color-black;
+    -webkit-text-fill-color: $color-black;
 
     background-color: $color-transparent;
     cursor: pointer;

@@ -82,6 +82,8 @@
     border: none;
 
     background-color: $color-transparent;
+    color: $color-black;
+    -webkit-text-fill-color: $color-black;
 
     outline: none;
     cursor: pointer;

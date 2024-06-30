@@ -1,5 +1,5 @@
   const MAX_SIZE_IN_BYTES = 5242880;
-  const pathToImage = '../img/content/avatars/template.png';
+  const pathToImage = './img/content/avatars/template.png';
   const avatar = document.querySelector('.avatar');
 
 const uploadAvatar = () => {

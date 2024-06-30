@@ -25,6 +25,7 @@
     font-family: $ff-pt;
     font-size: 48px;
     line-height: 130%;
+    font-weight: 400;
 
     @include vp-1023 {
       font-size: 32px;
@@ -34,7 +35,9 @@
   h3 {
     margin: 0;
 
+    font-family: $ff-pt;
     font-size: 36px;
+    font-weight: 400;
 
     @include vp-1023 {
       font-size: 28px;
@@ -44,7 +47,9 @@
   h4 {
     margin: 0;
 
+    font-family: $ff-pt;
     font-size: 28px;
+    font-weight: 400;
 
     @include vp-1023 {
       font-size: 24px;
