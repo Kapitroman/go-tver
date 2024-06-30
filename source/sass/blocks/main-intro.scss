@@ -102,6 +102,7 @@
     font-family: $ff-pt;
     font-size: 160px;
     line-height: 130%;
+    font-weight: 400;
 
     @include vp-1439 {
       margin-top: -40px;
@@ -120,8 +121,9 @@
 
   &__subtitle {
     margin: 0;
-    margin-left: 56%;
+    margin-left: 56.5%;
     margin-top: -55px;
+    font-weight: 400;
 
     width: 262px;
 
@@ -148,16 +150,18 @@
   &__text {
     width: calc((100% - 48px) * 0.54);
     margin-top: 164px;
+    margin-left: -5px;
 
     @include vp-1439 {
       width: calc((100% - 48px) * 0.45);
       margin-top: 140px;
+      margin-left: 0;
     }
 
     @include vp-1023 {
       width: 506px;
       margin-left: auto;
-      margin-top: 0;
+      margin-top: -30px;
     }
 
     @include vp-767 {
