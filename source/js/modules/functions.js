@@ -75,6 +75,43 @@ export let _slideToggle = (target, duration = 500) => {
 	}
 }
 
+export function FLS(message) {
+	setTimeout(() => {
+		if (window.FLS) {
+			console.log(message);
+		}
+	}, 0);
+}
+// Получить цифры из строки
+export function getDigFromString(item) {
+	return parseInt(item.replace(/[^\d]/g, ''))
+}
+// Форматирование цифр типа 100 000 000
+export function getDigFormat(item, sepp = ' ') {
+	return item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, `$1${sepp}`);
+}
+// Убрать класс из всех элементов массива
+export function removeClasses(array, className) {
+	for (var i = 0; i < array.length; i++) {
+		array[i].classList.remove(className);
+	}
+}
+// Уникализация массива
+export function uniqArray(array) {
+	return array.filter(function (item, index, self) {
+		return self.indexOf(item) === index;
+	});
+}
+// Функция получения индекса внутри родительского элемента
+export function indexInParent(parent, element) {
+	const array = Array.prototype.slice.call(parent.children);
+	return Array.prototype.indexOf.call(array, element);
+};
+// Функция проверяет, видим ли объект видимый
+export function isHidden(el) {
+	return (el.offsetParent === null)
+}
+
 // Обработка медиа запросов по атрибутам
 export function dataMediaQueries(array, dataSetValue) {
 	// Получение объектов с медиа-запросами
