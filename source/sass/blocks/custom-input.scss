@@ -78,8 +78,8 @@
   }
 
   &.is-invalid {
-    input,
-    textarea {
+    label input,
+    label textarea {
       border: 1px solid #ff1553;
 
       &:focus,

@@ -21,13 +21,13 @@ mixin modal-user-registration()
         inputPlaceholder: " ",
         inputType: "password",
         inputName: "password-registration",
-      })(data-required)
+      })(data-required, data-validate-type="text")
       +custom-input({
         inputLabel: "Введите пароль еще раз:",
         inputPlaceholder: " ",
         inputType: "password",
         inputName: "repeat-password-registration",
-      })(data-required)
+      })(data-required, data-validate-type="text")
       +main-btn({
         type: "submit",
         icon: "arrow-black",

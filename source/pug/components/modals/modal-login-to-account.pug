@@ -15,7 +15,7 @@ mixin modal-login-to-account()
         inputPlaceholder: " ",
         inputType: "password",
         inputName: "password-login",
-      })(data-required)
+      })(data-required, data-validate-type="text")
       +main-btn({
         type: "submit",
         icon: "arrow-black",

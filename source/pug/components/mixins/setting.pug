@@ -45,21 +45,21 @@ mixin setting()
               inputType: "password",
               inputName: "old-password",
               inputValue: "qwerty1"
-            })(data-required)
+            })(data-required data-validate-type="text")
             +custom-input({
               inputLabel: "Введите новый пароль:",
               inputPlaceholder: " ",
               inputType: "password",
               inputName: "new-password",
               inputValue: ""
-            })
+            })(data-validate-type="text")
             +custom-input({
               inputLabel: "Введите новый пароль еще раз",
               inputPlaceholder: " ",
               inputType: "password",
               inputName: "repeat-password",
               inputValue: ""
-            })
+            })(data-validate-type="text")
         .setting__section
           .setting__decription
             h2.setting__title Уведомления
