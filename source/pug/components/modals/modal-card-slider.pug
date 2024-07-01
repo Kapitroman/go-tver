@@ -28,7 +28,7 @@ mixin modal-card-slider()
         +icon("arrow-nav", 5, 9)
       .slider-button.swiper-button-next
         +icon("arrow-nav", 5, 9)
-    div(thumbsSlider="").modal-card-slider__preview.swiper.mySwiper
+    div(data-thumbsSlider="").modal-card-slider__preview.swiper.mySwiper
       .swiper-wrapper
         .modal-card-slider__preview-slide.swiper-slide
           +picture("content/cards", "card-01", "png", 456, 278, "виды отеля", true)
@@ -52,11 +52,3 @@ mixin modal-card-slider()
           +picture("content/cards", "card-01", "png", 456, 278, "виды отеля", true)
         .modal-card-slider__preview-slide.swiper-slide
           +picture("content/cards", "card-02", "png", 456, 278, "виды отеля", true)
-
-//-
-    .modal-card-slider__pagination.swiper-pagination
-  .slider-button.swiper-button-prev
-    +icon("arrow-nav", 5, 9)
-  .slider-button.swiper-button-next
-    +icon("arrow-nav", 5, 9)
-  button.modal__close-link(type="button", aria-label="Закрыть попап", data-close-modal) Вернуться на сайт

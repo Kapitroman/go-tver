@@ -27,10 +27,10 @@ block main
       //----------------------------------------------
       .container
         a.uikit__header-link(href="sitemap.html")
-          img(src="https://via.placeholder.com/300x150", width="300", alt="Логотип проекта")
-        h1.uikit__h1 Компоненты, используемые на проекте
+          img(src="./img/svg/logo-header.svg", width="300", alt="Логотип проекта")
+        h1.uikit__h1 Модальные окна, используемые на проекте
 
-        section.uikit__section
+        //- section.uikit__section
           h2.uikit__h2 Название компонента или группы компонентов
           p.uikit__text Информация о компоненте (подсказки \ предупреждение \ важная информация)
           .uikit__component
@@ -42,7 +42,7 @@ block main
 
         //- Модальные окна
         section.uikit__section(id="modals")
-          h2.uikit__h2 Модальные окна
+          //-h2.uikit__h2 Модальные окна
           .uikit__component
             p.uikit__text.uikit__text--class .modal \ .modal--main-slider
             +main-btn({text: "modal-main-slider",  type: "button", icon: "arrow-black",})(data-open-modal="main-slider")
