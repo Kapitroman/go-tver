@@ -1,4 +1,7 @@
 .tag-panel {
+  margin-left: 0;
+  margin-right: 0;
+
   @media (min-width: 768px) {
     display: flex;
     align-items: start;
