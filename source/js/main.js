@@ -23,7 +23,7 @@ import {copyInBuffer} from './modules/copy-in-buffer';
 import {initMainSlider} from './modules/init-main-slider';
 import {initModalCardSlider} from './modules/init-modal-card-slider';
 import {clickImagePreview} from './modules/click-image-preview';
-
+import {smsCodeConfirmation} from './modules/sms-code-confirmation';
 //import loadAndInitMap from "./modules/map.js";
 
 import * as flsFunctions from "./modules/functions.js";
@@ -74,6 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initMainSlider();
     initModalCardSlider();
     clickImagePreview();
+    smsCodeConfirmation();
   });
 });
 
