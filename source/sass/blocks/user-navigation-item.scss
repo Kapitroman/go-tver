@@ -1,3 +1,4 @@
+/*
 .user-navigation-item {
   display: inline-flex;
   align-items: center;
@@ -54,6 +55,163 @@
 
       width: 32px;
       height: 32px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__picture:nth-child(2) {
+    left: 24px;
+    z-index: 2;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__picture:nth-child(3) {
+    left: 44px;
+    z-index: 1;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+
+    @include vp-767 {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    margin: 0;
+    margin-top: 2px;
+    padding: 2px 6px 3px 6px;
+    border-radius: 8px;
+
+    font-family: $ff-pt;
+    font-style: italic;
+    font-size: 10px;
+    line-height: 100%;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &--red {
+      @include hover-focus {
+        background-color: $color-red;
+      }
+
+      .user-navigation-item__info {
+        background-color: $color-red;
+      }
+    }
+
+    &--green {
+      @include hover-focus {
+        background-color: $color-green;
+      }
+
+      .user-navigation-item__info {
+        background-color: $color-green;
+      }
+    }
+
+    &--blue {
+      @include hover-focus {
+        background-color: $color-blue;
+      }
+
+      .user-navigation-item__info {
+        background-color: $color-blue;
+      }
+    }
+
+    &--purple {
+      @include hover-focus {
+        background-color: $color-purple;
+      }
+
+      .user-navigation-item__info {
+        background-color: $color-purple;
+      }
+    }
+  }
+}
+*/
+.user-navigation-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 7px;
+  padding-right: 20px;
+  border-radius: 28px;
+  border: 1px solid $color-sep;
+
+  transition: background-color $trans-default;
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 4px;
+
+    border-radius: 0;
+    padding: 0;
+    border: none;
+  }
+
+  &__images {
+    position: relative;
+
+    width: 88px;
+    height: 40px;
+
+    @include vp-767 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      background:
+        linear-gradient($color-bg, $color-bg) padding-box,
+        linear-gradient(32.88deg, #FA7E1E 8.48%, #D62976 48.6%, #962FBF 88.72%) border-box;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    width: 40px;
+    height: 40px;
+
+    @include vp-767 {
+      position: relative;
+
+      width: 72px;
+      height: 72px;
     }
 
     img {

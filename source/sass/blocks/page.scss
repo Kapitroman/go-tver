@@ -2,7 +2,8 @@ main {
   padding-top: 198px;
 
   @include vp-767 {
-    padding-top: 189px;
+    //padding-top: 189px;
+    padding-top: 230px;
   }
 
   .bread-crumbs {

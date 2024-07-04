@@ -5,7 +5,8 @@
     width: auto;
 
     @include vp-767 {
-      width: 64px;
+      //width: 64px;
+      width: 84px;
     }
   }
 }

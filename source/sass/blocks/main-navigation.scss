@@ -20,7 +20,8 @@
   background-color: $color-bg;
 
   @include vp-767 {
-    top: 179px;
+    //top: 179px;
+    top: 219px;
 
     padding-top: 0;
   }

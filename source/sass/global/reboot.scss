@@ -30,7 +30,8 @@ html {
   scroll-padding-top: 218px;
 
   @include vp-767 {
-    scroll-padding-top: 189px;
+    //scroll-padding-top: 189px;
+    scroll-padding-top: 230px;
   }
 }
 
