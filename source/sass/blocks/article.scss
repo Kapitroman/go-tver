@@ -1,3 +1,4 @@
+/*
 .article {
   .container {
     overflow: hidden;
@@ -287,3 +288,413 @@
     }
   }
 }
+*/
+
+.article {
+  .container {
+    overflow: hidden;
+  }
+
+  h1 {
+    margin: 0;
+    margin-bottom: 30px;
+
+    font-family: $ff-pt;
+    font-size: 80px;
+    line-height: 130%;
+    font-weight: 400;
+
+    @include vp-767 {
+      margin-bottom: 20px;
+
+      font-size: 40px;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 24px;
+
+    font-family: $ff-pt;
+    font-size: 48px;
+    line-height: 130%;
+    font-weight: 400;
+
+    @include vp-1023 {
+      margin-bottom: 8px;
+
+      font-size: 32px;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 24px;
+
+    font-family: $ff-pt;
+    font-size: 36px;
+    font-weight: 400;
+
+    @include vp-1023 {
+      margin-bottom: 8px;
+
+      font-size: 28px;
+    }
+  }
+
+  h4 {
+    margin: 0;
+    margin-bottom: 24px;
+
+    font-family: $ff-pt;
+    font-size: 28px;
+    font-weight: 400;
+
+    @include vp-1023 {
+      margin-bottom: 8px;
+
+      font-size: 24px;
+    }
+  }
+
+  .tag-panel {
+    margin-bottom: 30px;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  figcaption {
+    margin-top: 16px;
+
+    font-size: 16px;
+    font-style: italic;
+    line-height: 24px;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__grid {
+    //position: relative;
+    /*
+    & > * {
+      width: calc((100% - 24px) * 936 / (936 + 456));
+
+      @include vp-1023 {
+        width: calc((100% - 24px) * 0.6);
+      }
+
+      @include vp-767 {
+        width: 100%;
+      }
+    }
+
+    & > * + *,
+    & > * + figure {
+      margin-top: 30px;
+
+      @include vp-1023 {
+        margin-top: 20px;
+      }
+    }
+    */
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
+    }
+
+    figure {
+      margin-bottom: 30px;
+
+      @include vp-767 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__content-main {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 24px;
+
+    @include vp-767 {
+      flex-direction: column;
+      gap: initial;
+    }
+
+    .ad-banner {
+      display: none;
+
+      @include vp-767 {
+        display: block;
+
+        margin-bottom: 20px;
+      }
+    }
+
+    .article__content-aside .ad-banner {
+      display: block;
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+
+  &__content-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    width: calc((100% - 24px) * 456 / (936 + 456));
+
+    @include vp-1023 {
+      width: calc((100% - 24px) * 0.4)
+    }
+
+    @include vp-767 {
+      width: 100%;
+
+      display: contents;
+    }
+  }
+
+  &__content-article {
+    width: calc((100% - 24px) * 936 / (936 + 456));
+
+    @include vp-1023 {
+      width: calc((100% - 24px) * 0.6);
+    }
+
+    @include vp-767 {
+      width: 100%;
+      display: contents;
+    }
+    /*
+    & > * + *,
+    & > * + figure {
+      margin-top: 30px;
+
+      @include vp-767 {
+        margin-top: 20px;
+      }
+    }
+    */
+  }
+
+  &__cover {
+    order: -1;
+  }
+
+  &__chapters {
+    //position: absolute;
+    //right: 0;
+    //top: 0;
+
+    //width: calc((100% - 24px) * 456 / (936 + 456));
+    width: 100%;
+    padding: 32px 36px;
+    border-radius: 24px;
+
+    background-color: #F2F1F0;
+
+    @media (min-width: 768px) {
+      //margin: 0;
+    }
+
+    @include vp-1023 {
+      //width: calc((100% - 24px) * 0.4);
+      padding: 20px 24px;
+    }
+
+    @include vp-767 {
+      //position: static;
+      //width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__chapters-title {
+    margin: 0;
+    margin-bottom: 16px;
+
+    font-family: ff-pt;
+    font-size: 24px;
+    line-height: 31px;
+
+    @include vp-1023 {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__chapters-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__chapters-link {
+    position: relative;
+
+    display: block;
+    padding-left: 28px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #7A7C80;
+
+    transition: color $trans-default;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      top: 11px;
+
+      width: 16px;
+      height: 1px;
+
+      background-color: #7A7C80;
+
+      transition: background-color  $trans-default;
+    }
+
+    @include hover-focus {
+      color: $color-black;
+      &::before {
+        background-color: $color-black;
+      }
+    }
+  }
+
+  &__actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 48px;
+
+    margin-bottom: 30px;
+
+    @include vp-1023 {
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__section {
+    margin-bottom: 30px;
+
+    @include vp-767 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin: 0;
+
+      font-size: 16px;
+      line-height: 24px;
+
+      @include vp-1023 {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+    & > p + p {
+      margin-top: 24px;
+
+      @include vp-767 {
+        margin-top: 21px;
+      }
+    }
+
+    a {
+      color: #5C73E5;
+
+      transition: opacity $trans-default;
+
+      @include hover-focus {
+        opacity: 0.7;
+      }
+    }
+
+    .ad-banner {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__content-footer {
+    width: 100%;
+  }
+
+  #map {
+    width: 100%;
+
+    margin-bottom: 30px;
+
+    @include vp-767 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info-panel {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    width: 100%;
+    padding: 23px 0;
+    border-top: 1px solid $color-sep;
+    border-bottom: 1px solid $color-sep;
+
+    @include vp-767 {
+      flex-direction: column;
+      justify-content: initial;
+      align-items: center;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+
+    span {
+      color: $color-txt2
+    }
+
+    a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+
+      transition: opacity $trans-default;
+
+      @include hover-focus {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
