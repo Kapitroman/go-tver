@@ -5,6 +5,12 @@ const initSwiper = (slider) => {
   // eslint-disable-next-line no-undef
 
   swiper = new Swiper(slider, {
+    loop: true,
+    speed: 1000,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     slidesPerView: 1,
     spaceBetween: 16,
     breakpoints: {
@@ -32,4 +38,4 @@ const initArticlesSlider = () => {
   initSwiper(articlesSlider);
 };
 
-export {initArticlesSlider};
+export { initArticlesSlider };
