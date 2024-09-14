@@ -1,4 +1,4 @@
-import {scrollTrigger} from './scroll-trigger';
+import { scrollTrigger } from './scroll-trigger';
 
 const heroSlider = document.querySelector('.main-intro__pictures');
 let swiper;
@@ -20,7 +20,8 @@ const initSwiper = (slider) => {
 
   swiper.autoplay.stop();
 
-  scrollTrigger(heroSlider, {threshold: 0.8, cb: () => swiper.autoplay.start()});
+  // scrollTrigger(heroSlider, {threshold: 0.8, cb: () => swiper.autoplay.start()});
+  scrollTrigger('.main-intro__pictures', { threshold: 0.8, cb: () => swiper.autoplay.start() });
 };
 
 const initHeroSlider = () => {
@@ -31,4 +32,4 @@ const initHeroSlider = () => {
   initSwiper(heroSlider);
 };
 
-export {initHeroSlider};
+export { initHeroSlider };

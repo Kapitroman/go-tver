@@ -1,5 +1,5 @@
 const addObserver = (el, options) => {
-  if(!('IntersectionObserver' in window)) {
+  if (!('IntersectionObserver' in window)) {
     if (options.cb) {
       options.cb(el);
     } else {
@@ -9,7 +9,7 @@ const addObserver = (el, options) => {
   }
   let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      if(entry.isIntersecting){
+      if (entry.isIntersecting) {
         if (options.cb) {
           options.cb(el)
         } else {
@@ -23,7 +23,12 @@ const addObserver = (el, options) => {
 }
 
 const scrollTrigger = (elem, options = {}) => {
-  addObserver(elem, options);
+  // addObserver(elem, options);
+  let els = document.querySelectorAll(elem);
+  els = Array.from(els)
+  els.forEach(el => {
+    addObserver(el, options);
+  })
 }
 
-export {scrollTrigger};
+export { scrollTrigger };
