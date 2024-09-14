@@ -20,7 +20,6 @@ const initSwiper = (slider) => {
 
   swiper.autoplay.stop();
 
-  // scrollTrigger(heroSlider, {threshold: 0.8, cb: () => swiper.autoplay.start()});
   scrollTrigger('.main-intro__pictures', { threshold: 0.8, cb: () => swiper.autoplay.start() });
 };
 

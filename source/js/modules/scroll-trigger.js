@@ -23,7 +23,6 @@ const addObserver = (el, options) => {
 }
 
 const scrollTrigger = (elem, options = {}) => {
-  // addObserver(elem, options);
   let els = document.querySelectorAll(elem);
   els = Array.from(els)
   els.forEach(el => {
